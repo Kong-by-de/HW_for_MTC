@@ -1,1 +1,0 @@
-This repository was created for HW by MTC My name: Дикий Александр Иванович My group: Б13-503
