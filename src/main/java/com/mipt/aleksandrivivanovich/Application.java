@@ -1,4 +1,4 @@
-package com.mipt.ivanpetrov;
+package com.mipt.aleksandrivivanovich;
 
 public class Application {
 
