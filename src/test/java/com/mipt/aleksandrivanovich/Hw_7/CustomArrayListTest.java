@@ -1,6 +1,5 @@
-package com.mipt.aleksandrivanovich;
+package com.mipt.aleksandrivanovich.Hw_7;
 
-import com.mipt.aleksandrivanovich.Hw_7.CustomArrayList; // ← Добавь эту строку вручную
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
