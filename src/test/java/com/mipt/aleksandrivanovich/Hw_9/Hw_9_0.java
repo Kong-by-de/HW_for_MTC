@@ -5,7 +5,7 @@ import java.nio.file.*;
 import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class Hw_9 {
+public class Hw_9_0 {
 
   private TextFileAnalyzer analyzer;
 
