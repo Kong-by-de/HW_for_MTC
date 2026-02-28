@@ -1,0 +1,8 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+logging:
+  level:
+    root: ERROR
+    com.mipt.aleksandrivanovich.second_sem.hw_1: WARN

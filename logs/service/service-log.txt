@@ -1,0 +1,130 @@
+2026-02-28 07:02:35 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 07:02:35 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-02-28 07:03:58 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 07:03:58 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-02-28 07:04:09 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 07:04:09 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-02-28 07:04:55 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 07:04:55 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-02-28 07:18:56 - ▶️ START: TaskService.createTask(New Task, New Description)
+2026-02-28 07:18:56 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: Task{id='6adfd089-d428-49d0-8850-f9e9b3d22974', title='New Task', description='New Description', com...
+2026-02-28 07:18:56 - ▶️ START: TaskService.updateTask(non-existing, Task{id='non-existing', title='Title', description='Description', completed=false})
+2026-02-28 07:18:56 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms
+2026-02-28 07:18:56 - ▶️ START: TaskService.deleteTask(delete-id)
+2026-02-28 07:18:56 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: true
+2026-02-28 07:18:56 - ▶️ START: TaskService.getTaskById(delete-id)
+2026-02-28 07:18:56 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-02-28 07:18:56 - ▶️ START: TaskService.getTaskById(test-id)
+2026-02-28 07:18:56 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional[Task{id='test-id', title='Test Task', description='Test Description', completed=false}]
+2026-02-28 07:18:56 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 07:18:56 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: [Task{id='1', title='Task 1', description='Description 1', completed=false}, Task{id='2', title='Tas...
+2026-02-28 07:18:56 - ▶️ START: TaskService.createTask(, Description)
+2026-02-28 07:18:56 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: Task{id='9be3d554-d31e-4b4c-a14b-5a8130dfe364', title='', description='Description', completed=false...
+2026-02-28 07:18:56 - ▶️ START: TaskService.updateTask(update-id, Task{id='update-id', title='Updated Title', description='Updated Description', completed=true})
+2026-02-28 07:18:56 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms | Result: Task{id='update-id', title='Updated Title', description='Updated Description', completed=true}
+2026-02-28 07:18:56 - ▶️ START: TaskService.getTaskById(non-existing)
+2026-02-28 07:18:56 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-02-28 07:18:56 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 07:18:56 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-02-28 07:18:56 - ▶️ START: TaskService.deleteTask(non-existing)
+2026-02-28 07:18:56 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: false
+2026-02-28 07:39:49 - ▶️ START: TaskService.createTask(New Task, New Description)
+2026-02-28 07:39:49 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 1 ms | Result: Task{id='14b86970-7936-40f8-94ce-9b73f76547b9', title='New Task', description='New Description', com...
+2026-02-28 07:39:49 - ▶️ START: TaskService.updateTask(non-existing, Task{id='non-existing', title='Title', description='Description', completed=false})
+2026-02-28 07:39:49 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms
+2026-02-28 07:39:49 - ▶️ START: TaskService.deleteTask(delete-id)
+2026-02-28 07:39:49 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: true
+2026-02-28 07:39:49 - ▶️ START: TaskService.getTaskById(delete-id)
+2026-02-28 07:39:49 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-02-28 07:39:49 - ▶️ START: TaskService.getTaskById(test-id)
+2026-02-28 07:39:49 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional[Task{id='test-id', title='Test Task', description='Test Description', completed=false}]
+2026-02-28 07:39:49 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 07:39:49 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: [Task{id='1', title='Task 1', description='Description 1', completed=false}, Task{id='2', title='Tas...
+2026-02-28 07:39:49 - ▶️ START: TaskService.updateTask(update-id, Task{id='update-id', title='Updated Title', description='Updated Description', completed=true})
+2026-02-28 07:39:49 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms | Result: Task{id='update-id', title='Updated Title', description='Updated Description', completed=true}
+2026-02-28 07:39:49 - ▶️ START: TaskService.getTaskById(non-existing)
+2026-02-28 07:39:49 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-02-28 07:39:49 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 07:39:49 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-02-28 07:39:49 - ▶️ START: TaskService.deleteTask(non-existing)
+2026-02-28 07:39:49 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: false
+2026-02-28 07:42:46 - ▶️ START: TaskService.createTask(New Task, New Description)
+2026-02-28 07:42:46 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: Task{id='662b016f-2002-48e1-9414-2362ca2b4b45', title='New Task', description='New Description', com...
+2026-02-28 07:42:46 - ▶️ START: TaskService.updateTask(non-existing, Task{id='non-existing', title='Title', description='Description', completed=false})
+2026-02-28 07:42:46 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms
+2026-02-28 07:42:46 - ▶️ START: TaskService.deleteTask(delete-id)
+2026-02-28 07:42:46 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: true
+2026-02-28 07:42:46 - ▶️ START: TaskService.getTaskById(delete-id)
+2026-02-28 07:42:46 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-02-28 07:42:46 - ▶️ START: TaskService.getTaskById(test-id)
+2026-02-28 07:42:46 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional[Task{id='test-id', title='Test Task', description='Test Description', completed=false}]
+2026-02-28 07:42:46 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 07:42:46 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: [Task{id='1', title='Task 1', description='Description 1', completed=false}, Task{id='2', title='Tas...
+2026-02-28 07:42:46 - ▶️ START: TaskService.updateTask(update-id, Task{id='update-id', title='Updated Title', description='Updated Description', completed=true})
+2026-02-28 07:42:46 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms | Result: Task{id='update-id', title='Updated Title', description='Updated Description', completed=true}
+2026-02-28 07:42:46 - ▶️ START: TaskService.getTaskById(non-existing)
+2026-02-28 07:42:46 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-02-28 07:42:46 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 07:42:46 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-02-28 07:42:46 - ▶️ START: TaskService.deleteTask(non-existing)
+2026-02-28 07:42:46 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: false
+2026-02-28 07:46:36 - ▶️ START: TaskService.createTask(New Task, New Description)
+2026-02-28 07:46:36 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: Task{id='bccfb963-6933-4536-a403-95577046df08', title='New Task', description='New Description', com...
+2026-02-28 07:46:36 - ▶️ START: TaskService.updateTask(non-existing, Task{id='non-existing', title='Title', description='Description', completed=false})
+2026-02-28 07:46:36 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms
+2026-02-28 07:46:36 - ▶️ START: TaskService.deleteTask(delete-id)
+2026-02-28 07:46:36 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: true
+2026-02-28 07:46:36 - ▶️ START: TaskService.getTaskById(delete-id)
+2026-02-28 07:46:36 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-02-28 07:46:36 - ▶️ START: TaskService.getTaskById(test-id)
+2026-02-28 07:46:36 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional[Task{id='test-id', title='Test Task', description='Test Description', completed=false}]
+2026-02-28 07:46:36 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 07:46:36 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: [Task{id='1', title='Task 1', description='Description 1', completed=false}, Task{id='2', title='Tas...
+2026-02-28 07:46:36 - ▶️ START: TaskService.updateTask(update-id, Task{id='update-id', title='Updated Title', description='Updated Description', completed=true})
+2026-02-28 07:46:36 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms | Result: Task{id='update-id', title='Updated Title', description='Updated Description', completed=true}
+2026-02-28 07:46:36 - ▶️ START: TaskService.getTaskById(non-existing)
+2026-02-28 07:46:36 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-02-28 07:46:36 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 07:46:36 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-02-28 07:46:36 - ▶️ START: TaskService.deleteTask(non-existing)
+2026-02-28 07:46:36 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: false
+2026-02-28 08:26:35 - ▶️ START: TaskService.createTask(New Task, New Description)
+2026-02-28 08:26:35 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: Task{id='4cd5713e-5ce4-403b-84fd-bc4164d876d6', title='New Task', description='New Description', com...
+2026-02-28 08:26:35 - ▶️ START: TaskService.updateTask(non-existing, Task{id='non-existing', title='Title', description='Description', completed=false})
+2026-02-28 08:26:35 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms
+2026-02-28 08:26:35 - ▶️ START: TaskService.deleteTask(delete-id)
+2026-02-28 08:26:35 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: true
+2026-02-28 08:26:35 - ▶️ START: TaskService.getTaskById(delete-id)
+2026-02-28 08:26:35 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 1 ms | Result: Optional.empty
+2026-02-28 08:26:35 - ▶️ START: TaskService.getTaskById(test-id)
+2026-02-28 08:26:35 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional[Task{id='test-id', title='Test Task', description='Test Description', completed=false}]
+2026-02-28 08:26:35 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 08:26:35 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: [Task{id='1', title='Task 1', description='Description 1', completed=false}, Task{id='2', title='Tas...
+2026-02-28 08:26:35 - ▶️ START: TaskService.updateTask(update-id, Task{id='update-id', title='Updated Title', description='Updated Description', completed=true})
+2026-02-28 08:26:35 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms | Result: Task{id='update-id', title='Updated Title', description='Updated Description', completed=true}
+2026-02-28 08:26:35 - ▶️ START: TaskService.getTaskById(non-existing)
+2026-02-28 08:26:35 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-02-28 08:26:35 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 08:26:35 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-02-28 08:26:35 - ▶️ START: TaskService.deleteTask(non-existing)
+2026-02-28 08:26:35 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: false
+2026-02-28 08:34:16 - ▶️ START: TaskService.createTask(New Task, New Description)
+2026-02-28 08:34:16 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: Task{id='ec4f1658-1485-4897-88b1-565d9119852e', title='New Task', description='New Description', com...
+2026-02-28 08:34:16 - ▶️ START: TaskService.updateTask(non-existing, Task{id='non-existing', title='Title', description='Description', completed=false})
+2026-02-28 08:34:16 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms
+2026-02-28 08:34:16 - ▶️ START: TaskService.deleteTask(delete-id)
+2026-02-28 08:34:16 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: true
+2026-02-28 08:34:16 - ▶️ START: TaskService.getTaskById(delete-id)
+2026-02-28 08:34:16 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-02-28 08:34:16 - ▶️ START: TaskService.getTaskById(test-id)
+2026-02-28 08:34:16 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional[Task{id='test-id', title='Test Task', description='Test Description', completed=false}]
+2026-02-28 08:34:16 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 08:34:16 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: [Task{id='1', title='Task 1', description='Description 1', completed=false}, Task{id='2', title='Tas...
+2026-02-28 08:34:16 - ▶️ START: TaskService.updateTask(update-id, Task{id='update-id', title='Updated Title', description='Updated Description', completed=true})
+2026-02-28 08:34:16 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms | Result: Task{id='update-id', title='Updated Title', description='Updated Description', completed=true}
+2026-02-28 08:34:16 - ▶️ START: TaskService.getTaskById(non-existing)
+2026-02-28 08:34:16 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-02-28 08:34:16 - ▶️ START: TaskService.getAllTasks()
+2026-02-28 08:34:16 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-02-28 08:34:16 - ▶️ START: TaskService.deleteTask(non-existing)
+2026-02-28 08:34:16 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: false
