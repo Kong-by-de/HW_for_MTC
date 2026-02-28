@@ -17,6 +17,7 @@ spring:
   logging:
     level:
       com.mipt.aleksandrivanovich.second_sem.hw_1: DEBUG
+      org.springframework.web: INFO
 
 ---
 spring:
@@ -26,3 +27,4 @@ spring:
   logging:
     level:
       com.mipt.aleksandrivanovich.second_sem.hw_1: INFO
+      org.springframework.web: WARN
