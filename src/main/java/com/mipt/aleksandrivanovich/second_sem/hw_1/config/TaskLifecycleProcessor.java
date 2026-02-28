@@ -6,11 +6,24 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.stereotype.Component;
 
+/**
+ * Процессор жизненного цикла бинов.
+ * Логирует этапы создания и инициализации бинов TaskService и TaskRepository.
+ */
 @Component
 public class TaskLifecycleProcessor implements BeanPostProcessor {
 
   private static final Logger logger = LoggerFactory.getLogger(TaskLifecycleProcessor.class);
 
+  /**
+   * Вызывается перед инициализацией бина (после создания экземпляра).
+   * Логирует событие для бинов TaskService и TaskRepository.
+   *
+   * @param bean     создаваемый бин
+   * @param beanName имя бина в контексте
+   * @return тот же экземпляр бина (без изменений)
+   * @throws BeansException если возникла ошибка обработки
+   */
   @Override
   public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
     String beanClassName = bean.getClass().getSimpleName();
@@ -22,7 +35,16 @@ public class TaskLifecycleProcessor implements BeanPostProcessor {
 
     return bean;
   }
-  
+
+  /**
+   * Вызывается после инициализации бина (после @PostConstruct).
+   * Логирует событие для бинов TaskService и TaskRepository.
+   *
+   * @param bean     инициализированный бин
+   * @param beanName имя бина в контексте
+   * @return тот же экземпляр бина (без изменений)
+   * @throws BeansException если возникла ошибка обработки
+   */
   @Override
   public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
     String beanClassName = bean.getClass().getSimpleName();

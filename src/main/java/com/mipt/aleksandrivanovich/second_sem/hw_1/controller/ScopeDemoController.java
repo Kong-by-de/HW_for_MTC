@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.second_sem.hw_1;
+package com.mipt.aleksandrivanovich.second_sem.hw_1.controller;
 
 import com.mipt.aleksandrivanovich.second_sem.hw_1.config.PrototypeScopedBean;
 import com.mipt.aleksandrivanovich.second_sem.hw_1.config.RequestScopedBean;
@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Контроллер для демонстрации работы бинов с разными областями видимости.
+ * Предоставляет эндпоинты для проверки request и prototype scope.
+ */
 @RestController
 @RequestMapping("/api/scope")
 public class ScopeDemoController {
@@ -18,6 +22,12 @@ public class ScopeDemoController {
   private final RequestScopedBean requestScopedBean;
   private final ApplicationContext applicationContext;
 
+  /**
+   * Конструктор с инжекцией зависимостей.
+   *
+   * @param requestScopedBean бин с request scope для демонстрации
+   * @param applicationContext контекст для получения prototype-бинов
+   */
   @Autowired
   public ScopeDemoController(RequestScopedBean requestScopedBean,
                              ApplicationContext applicationContext) {
@@ -25,6 +35,12 @@ public class ScopeDemoController {
     this.applicationContext = applicationContext;
   }
 
+  /**
+   * Возвращает информацию о request-scoped бине.
+   * При каждом HTTP-запросе создается новый экземпляр, поэтому requestId будет разным.
+   *
+   * @return карта с requestId, временем создания и описанием запроса
+   */
   @GetMapping("/request")
   public Map<String, String> getRequestScopeInfo() {
     Map<String, String> info = new HashMap<>();
@@ -35,6 +51,12 @@ public class ScopeDemoController {
     return info;
   }
 
+  /**
+   * Демонстрирует работу prototype-scoped бина.
+   * Получает два экземпляра из контекста и показывает, что они разные.
+   *
+   * @return карта с идентификаторами экземпляров, сгенерированными ID и флагом различия
+   */
   @GetMapping("/prototype")
   public Map<String, Object> getPrototypeScopeInfo() {
     Map<String, Object> result = new HashMap<>();
