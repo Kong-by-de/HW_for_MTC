@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.second_sem.hw_1.controller;
+package com.mipt.aleksandrivanovich.second_sem.hw_1;
 
 import com.mipt.aleksandrivanovich.second_sem.hw_1.config.PrototypeScopedBean;
 import com.mipt.aleksandrivanovich.second_sem.hw_1.config.RequestScopedBean;
