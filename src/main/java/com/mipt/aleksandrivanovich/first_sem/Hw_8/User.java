@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.first_sem.Hw_6.Hw_8;
+package com.mipt.aleksandrivanovich.first_sem.Hw_8;
 
 public class User {
   @NotNull(message = "Имя не может быть null")

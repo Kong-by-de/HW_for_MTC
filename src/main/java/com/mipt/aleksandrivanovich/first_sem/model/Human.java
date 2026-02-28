@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.first_sem.Hw_6.model;
+package com.mipt.aleksandrivanovich.first_sem.model;
 
 public class Human {
   private String name;

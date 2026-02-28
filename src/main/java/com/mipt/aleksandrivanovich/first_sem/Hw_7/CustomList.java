@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.first_sem.Hw_6.Hw_7;
+package com.mipt.aleksandrivanovich.first_sem.Hw_7;
 
 
 public interface CustomList<A> {

@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.first_sem.Hw_6.Hw_9;
+package com.mipt.aleksandrivanovich.first_sem.Hw_9;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

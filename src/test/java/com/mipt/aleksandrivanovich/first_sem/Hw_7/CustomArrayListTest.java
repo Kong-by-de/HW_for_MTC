@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.Hw_7;
+package com.mipt.aleksandrivanovich.first_sem.Hw_7;
 
 import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;

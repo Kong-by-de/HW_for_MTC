@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.first_sem.Hw_6.Hw_10;
+package com.mipt.aleksandrivanovich.first_sem.Hw_10;
 
 import java.time.Duration;
 import java.time.Instant;

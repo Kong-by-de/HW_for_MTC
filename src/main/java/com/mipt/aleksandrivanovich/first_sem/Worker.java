@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.first_sem.Hw_6;
+package com.mipt.aleksandrivanovich.first_sem;
 
 public abstract class Worker {
   public abstract void work(int value);

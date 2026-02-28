@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.first_sem.Hw_6.Hw_11;
+package com.mipt.aleksandrivanovich.first_sem.Hw_11;
 
 public class Bank {
 

@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.Hw_9;
+package com.mipt.aleksandrivanovich.first_sem.Hw_9;
 
 import org.junit.jupiter.api.*;
 import java.nio.file.*;

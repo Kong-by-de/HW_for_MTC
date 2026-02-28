@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.first_sem.Hw_6;
+package com.mipt.aleksandrivanovich.first_sem;
 
 public class ArrayUtils {
   public static <T> int findFirst(T[] array, T element) {

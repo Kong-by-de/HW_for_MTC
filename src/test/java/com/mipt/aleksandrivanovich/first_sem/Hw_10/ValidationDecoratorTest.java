@@ -1,4 +1,4 @@
-package com.mipt.aleksandrivanovich.Hw_10;
+package com.mipt.aleksandrivanovich.first_sem.Hw_10;
 
 import org.junit.jupiter.api.Test;
 import java.util.Optional;
