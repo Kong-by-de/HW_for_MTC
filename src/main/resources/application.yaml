@@ -6,6 +6,11 @@ app:
   version: "1.0.0"
 
 spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      enabled: true
   profiles:
     active: dev
 
@@ -17,7 +22,6 @@ spring:
   logging:
     level:
       com.mipt.aleksandrivanovich.second_sem.hw_1: DEBUG
-      org.springframework.web: INFO
 
 ---
 spring:
@@ -27,4 +31,3 @@ spring:
   logging:
     level:
       com.mipt.aleksandrivanovich.second_sem.hw_1: INFO
-      org.springframework.web: WARN

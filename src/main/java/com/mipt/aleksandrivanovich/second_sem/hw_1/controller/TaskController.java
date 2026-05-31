@@ -1,12 +1,23 @@
 package com.mipt.aleksandrivanovich.second_sem.hw_1.controller;
 
-import com.mipt.aleksandrivanovich.second_sem.hw_1.model.Task;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto;
 import com.mipt.aleksandrivanovich.second_sem.hw_1.service.TaskService;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.validation.OnCreate;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.validation.OnUpdate;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -15,101 +26,120 @@ import java.util.Map;
 
 /**
  * REST контроллер для управления задачами.
- * Обрабатывает HTTP запросы к API /api/tasks
  */
 @RestController
 @RequestMapping("/api/tasks")
+@Validated
+@Tag(name = "Tasks", description = "API для управления задачами")
 public class TaskController {
 
-  private final TaskService taskService;
+    private final TaskService taskService;
 
-  /**
-   * Конструктор с инжекцией сервиса
-   * @param taskService сервис для бизнес-логики
-   */
-  public TaskController(TaskService taskService) {
-    this.taskService = taskService;
-  }
+    @Value("${app.version:2.0.0}")
+    private String apiVersion;
 
-  /**
-   * GET /api/tasks - получить все задачи
-   * @return список задач
-   */
-  @GetMapping
-  public ResponseEntity<List<Task>> getAllTasks() {
-    return ResponseEntity.ok(taskService.getAllTasks());
-  }
-
-  /**
-   * GET /api/tasks/{id} - получить задачу по ID
-   * @param id идентификатор задачи
-   * @return задача или 404 если не найдена
-   */
-  @GetMapping("/{id}")
-  public ResponseEntity<Task> getTaskById(@PathVariable String id) {
-    return taskService.getTaskById(id)
-        .map(ResponseEntity::ok)
-        .orElse(ResponseEntity.notFound().build());
-  }
-
-  /**
-   * POST /api/tasks - создать новую задачу
-   * @param task данные задачи (title, description)
-   * @return созданная задача
-   */
-  @PostMapping
-  public ResponseEntity<Task> createTask(@Valid @RequestBody Task task) {
-    Task created = taskService.createTask(
-        task.getTitle(),
-        task.getDescription()
-    );
-    return ResponseEntity.ok(created);
-  }
-
-  /**
-   * PUT /api/tasks/{id} - обновить задачу
-   * @param id идентификатор задачи
-   * @param task новые данные
-   * @return обновленная задача или 404
-   */
-  @PutMapping("/{id}")
-  public ResponseEntity<Task> updateTask(
-      @PathVariable String id,
-      @Valid @RequestBody Task task) {
-    Task updated = taskService.updateTask(id, task);
-    if (updated != null) {
-      return ResponseEntity.ok(updated);
+    public TaskController(TaskService taskService) {
+        this.taskService = taskService;
     }
-    return ResponseEntity.notFound().build();
-  }
 
-  /**
-   * DELETE /api/tasks/{id} - удалить задачу
-   * @param id идентификатор задачи
-   * @return 204 если удалено, 404 если не найдено
-   */
-  @DeleteMapping("/{id}")
-  public ResponseEntity<Void> deleteTask(@PathVariable String id) {
-    boolean deleted = taskService.deleteTask(id);
-    if (deleted) {
-      return ResponseEntity.noContent().build();
+    @GetMapping
+    @Operation(summary = "Получить все задачи", description = "Возвращает список всех задач")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Успешно получены задачи",
+            content = @Content(mediaType = "application/json",
+                schema = @Schema(implementation = TaskResponseDto.class)))
+    })
+    public ResponseEntity<List<TaskResponseDto>> getAllTasks() {
+        List<TaskResponseDto> tasks = taskService.getAllTasks();
+
+        return ResponseEntity.ok()
+            .headers(httpHeaders -> {
+                httpHeaders.add("X-Total-Count", String.valueOf(tasks.size()));
+                httpHeaders.add("X-API-Version", apiVersion);
+            })
+            .body(tasks);
     }
-    return ResponseEntity.notFound().build();
-  }
 
-  /**
-   * Обработчик ошибок валидации.
-   * Возвращает 400 Bad Request с описанием ошибок полей.
-   */
-  @ResponseStatus(HttpStatus.BAD_REQUEST)
-  @ExceptionHandler(MethodArgumentNotValidException.class)
-  public Map<String, String> handleValidationExceptions(MethodArgumentNotValidException ex) {
-    Map<String, String> errors = new HashMap<>();
-    ex.getBindingResult().getAllErrors().forEach((error) -> {
-      String fieldName = ((FieldError) error).getField();
-      String errorMessage = error.getDefaultMessage();
-      errors.put(fieldName, errorMessage);
-    });
-    return errors;
-  }
+    @GetMapping("/{id}")
+    @Operation(summary = "Получить задачу по ID", description = "Возвращает задачу по её идентификатору")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Задача найдена",
+            content = @Content(mediaType = "application/json",
+                schema = @Schema(implementation = TaskResponseDto.class))),
+        @ApiResponse(responseCode = "404", description = "Задача не найдена",
+            content = @Content)
+    })
+    public ResponseEntity<TaskResponseDto> getTaskById(
+        @Parameter(description = "Идентификатор задачи", required = true)
+        @PathVariable String id) {
+
+        return taskService.getTaskById(id)
+            .map(task -> ResponseEntity.ok()
+                .header("X-API-Version", apiVersion)
+                .body(task))
+            .orElse(ResponseEntity.notFound().build());
+    }
+
+    @PostMapping
+    @Operation(summary = "Создать новую задачу", description = "Создаёт новую задачу с указанными параметрами")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "201", description = "Задача успешно создана",
+            content = @Content(mediaType = "application/json",
+                schema = @Schema(implementation = TaskResponseDto.class))),
+        @ApiResponse(responseCode = "400", description = "Некорректные данные",
+            content = @Content)
+    })
+    public ResponseEntity<TaskResponseDto> createTask(
+        @Parameter(description = "Данные для создания задачи", required = true)
+        @Validated(OnCreate.class) @Valid @RequestBody TaskCreateDto dto) {
+
+        TaskResponseDto created = taskService.createTask(dto);
+        return ResponseEntity.status(HttpStatus.CREATED)
+            .header("X-API-Version", apiVersion)
+            .body(created);
+    }
+
+    @PutMapping("/{id}")
+    @Operation(summary = "Обновить задачу", description = "Обновляет существующую задачу")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "Задача успешно обновлена",
+            content = @Content(mediaType = "application/json",
+                schema = @Schema(implementation = TaskResponseDto.class))),
+        @ApiResponse(responseCode = "404", description = "Задача не найдена",
+            content = @Content),
+        @ApiResponse(responseCode = "400", description = "Некорректные данные",
+            content = @Content)
+    })
+    public ResponseEntity<TaskResponseDto> updateTask(
+        @Parameter(description = "Идентификатор задачи", required = true)
+        @PathVariable String id,
+        @Parameter(description = "Данные для обновления задачи", required = true)
+        @Validated(OnUpdate.class) @Valid @RequestBody TaskUpdateDto dto) {
+
+        return taskService.updateTask(id, dto)
+            .map(task -> ResponseEntity.ok()
+                .header("X-API-Version", apiVersion)
+                .body(task))
+            .orElse(ResponseEntity.notFound().build());
+    }
+
+    @DeleteMapping("/{id}")
+    @Operation(summary = "Удалить задачу", description = "Удаляет задачу по идентификатору")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "204", description = "Задача успешно удалена"),
+        @ApiResponse(responseCode = "404", description = "Задача не найдена",
+            content = @Content)
+    })
+    public ResponseEntity<Void> deleteTask(
+        @Parameter(description = "Идентификатор задачи", required = true)
+        @PathVariable String id) {
+
+        boolean deleted = taskService.deleteTask(id);
+        if (deleted) {
+            return ResponseEntity.noContent()
+                .header("X-API-Version", apiVersion)
+                .build();
+        }
+        return ResponseEntity.notFound().build();
+    }
 }
