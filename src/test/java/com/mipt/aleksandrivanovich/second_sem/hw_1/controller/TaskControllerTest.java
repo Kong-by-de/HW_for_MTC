@@ -1,7 +1,11 @@
 package com.mipt.aleksandrivanovich.second_sem.hw_1.controller;
 
-import com.mipt.aleksandrivanovich.second_sem.hw_1.model.Task;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.model.Priority;
 import com.mipt.aleksandrivanovich.second_sem.hw_1.repository.TaskRepository;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.service.TaskService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,241 +15,238 @@ import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.http.*;
 import org.springframework.test.context.ActiveProfiles;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * Модульные тесты для TaskController.
- * Тестирует все CRUD endpoints контроллера.
+ * Интеграционные тесты для TaskController.
+ * Тестирует CRUD эндпоинты с использованием DTO.
  */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ActiveProfiles("test")
 class TaskControllerTest {
 
-  @LocalServerPort
-  private int port;
+    @LocalServerPort
+    private int port;
 
-  @Autowired
-  private TestRestTemplate restTemplate;
+    @Autowired
+    private TestRestTemplate restTemplate;
 
-  @Autowired
-  private TaskRepository taskRepository;
+    @Autowired
+    private TaskRepository taskRepository;
 
-  private String baseUrl;
+    @Autowired
+    private TaskService taskService;
 
-  @BeforeEach
-  void setUp() {
-    baseUrl = "http://localhost:" + port + "/api/tasks";
-    // Очищаем репозиторий перед каждым тестом
-    taskRepository.findAll().forEach(task -> taskRepository.deleteById(task.getId()));
-  }
+    private String baseUrl;
 
-  /**
-   * Тест: GET /api/tasks - получить все задачи
-   * Позитивный сценарий: возвращает пустой список
-   */
-  @Test
-  void getAllTasks_EmptyList_ReturnsOk() {
-    // When
-    ResponseEntity<List> response = restTemplate.getForEntity(baseUrl, List.class);
+    @BeforeEach
+    void setUp() {
+        baseUrl = "http://localhost:" + port + "/api/tasks";
+        // Очищаем репозиторий перед каждым тестом
+        taskRepository.findAll().forEach(task -> taskRepository.deleteById(task.getId()));
+    }
 
-    // Then
-    assertEquals(HttpStatus.OK, response.getStatusCode());
-    assertNotNull(response.getBody());
-    assertTrue(response.getBody().isEmpty());
-  }
+    @Test
+    void getAllTasks_EmptyList_ReturnsOk() {
+        // When
+        ResponseEntity<List> response = restTemplate.getForEntity(baseUrl, List.class);
 
-  /**
-   * Тест: GET /api/tasks - получить все задачи
-   * Позитивный сценарий: возвращает список с задачами
-   */
-  @Test
-  void getAllTasks_WithTasks_ReturnsAllTasks() {
-    // Given
-    Task task1 = new Task("1", "Task 1", "Description 1", false);
-    Task task2 = new Task("2", "Task 2", "Description 2", true);
-    taskRepository.save(task1);
-    taskRepository.save(task2);
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertTrue(response.getBody().isEmpty());
+    }
 
-    // When
-    ResponseEntity<List> response = restTemplate.getForEntity(baseUrl, List.class);
+    @Test
+    void getAllTasks_WithTasks_ReturnsAllTasks() {
+        // Given
+        TaskCreateDto dto1 = createValidDto("Task 1");
+        TaskCreateDto dto2 = createValidDto("Task 2");
+        taskService.createTask(dto1);
+        taskService.createTask(dto2);
 
-    // Then
-    assertEquals(HttpStatus.OK, response.getStatusCode());
-    assertNotNull(response.getBody());
-    assertEquals(2, response.getBody().size());
-  }
+        // When
+        ResponseEntity<List> response = restTemplate.getForEntity(baseUrl, List.class);
 
-  /**
-   * Тест: GET /api/tasks/{id} - получить задачу по ID
-   * Позитивный сценарий: задача найдена
-   */
-  @Test
-  void getTaskById_ExistingId_ReturnsTask() {
-    // Given
-    Task task = new Task("test-id", "Test Task", "Test Description", false);
-    taskRepository.save(task);
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals(2, response.getBody().size());
+    }
 
-    // When
-    ResponseEntity<Task> response = restTemplate.getForEntity(baseUrl + "/test-id", Task.class);
+    @Test
+    void getTaskById_ExistingId_ReturnsTask() {
+        // Given
+        TaskCreateDto dto = createValidDto("Test Task");
+        TaskResponseDto created = taskService.createTask(dto);
 
-    // Then
-    assertEquals(HttpStatus.OK, response.getStatusCode());
-    assertNotNull(response.getBody());
-    assertEquals("test-id", Objects.requireNonNull(response.getBody()).getId());
-    assertEquals("Test Task", response.getBody().getTitle());
-  }
+        // When
+        ResponseEntity<TaskResponseDto> response = restTemplate.getForEntity(
+            baseUrl + "/" + created.getId(), TaskResponseDto.class);
 
-  /**
-   * Тест: GET /api/tasks/{id} - получить задачу по ID
-   * Негативный сценарий: задача не найдена
-   */
-  @Test
-  void getTaskById_NonExistingId_ReturnsNotFound() {
-    // When
-    ResponseEntity<Task> response = restTemplate.getForEntity(baseUrl + "/non-existing", Task.class);
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals("Test Task", Objects.requireNonNull(response.getBody()).getTitle());
+    }
 
-    // Then
-    assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
-  }
+    @Test
+    void getTaskById_NonExistingId_ReturnsNotFound() {
+        // When
+        ResponseEntity<TaskResponseDto> response = restTemplate.getForEntity(
+            baseUrl + "/non-existing", TaskResponseDto.class);
 
-  /**
-   * Тест: POST /api/tasks - создать новую задачу
-   * Позитивный сценарий: задача создана
-   */
-  @Test
-  void createTask_ValidTask_ReturnsCreatedTask() {
-    // Given
-    Task newTask = new Task();
-    newTask.setTitle("New Task");
-    newTask.setDescription("New Description");
-    newTask.setCompleted(false);
+        // Then
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+    }
 
-    // When
-    ResponseEntity<Task> response = restTemplate.postForEntity(baseUrl, newTask, Task.class);
+    @Test
+    void createTask_ValidTask_ReturnsCreatedTask() {
+        // Given
+        TaskCreateDto dto = createValidDto("New Task");
 
-    // Then
-    assertEquals(HttpStatus.OK, response.getStatusCode());
-    assertNotNull(response.getBody());
-    assertNotNull(Objects.requireNonNull(response.getBody()).getId());
-    assertEquals("New Task", response.getBody().getTitle());
-    assertFalse(response.getBody().isCompleted());
-  }
+        // When
+        ResponseEntity<TaskResponseDto> response = restTemplate.postForEntity(
+            baseUrl, dto, TaskResponseDto.class);
 
-  /**
-   * Тест: POST /api/tasks - создать новую задачу
-   * Негативный сценарий: пустой заголовок
-   */
-  @Test
-  void createTask_EmptyTitle_ReturnsBadRequest() {
-    // Given
-    Task invalidTask = new Task();
-    invalidTask.setTitle("");
-    invalidTask.setDescription("Description");
+        // Then
+        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertNotNull(Objects.requireNonNull(response.getBody()).getId());
+        assertEquals("New Task", response.getBody().getTitle());
+        assertEquals(Priority.HIGH, response.getBody().getPriority());
+    }
 
-    // When
-    ResponseEntity<String> response = restTemplate.postForEntity(baseUrl, invalidTask, String.class);
+    @Test
+    void createTask_EmptyTitle_ReturnsBadRequest() {
+        // Given
+        TaskCreateDto invalidDto = new TaskCreateDto();
+        invalidDto.setTitle("");
+        invalidDto.setDescription("Description");
+        invalidDto.setPriority(Priority.HIGH);
+        invalidDto.setDueDate(LocalDate.now().plusDays(7));
 
-    // Then
-    // Spring Boot вернет 400 или 500 в зависимости от валидации
-    assertTrue(response.getStatusCode().is4xxClientError() ||
-        response.getStatusCode().is5xxServerError());
-  }
+        // When
+        ResponseEntity<String> response = restTemplate.postForEntity(baseUrl, invalidDto, String.class);
 
-  /**
-   * Тест: PUT /api/tasks/{id} - обновить задачу
-   * Позитивный сценарий: задача обновлена
-   */
-  @Test
-  void updateTask_ExistingId_ReturnsUpdatedTask() {
-    // Given
-    Task task = new Task("update-id", "Old Title", "Old Description", false);
-    taskRepository.save(task);
+        // Then
+        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+    }
 
-    Task updatedTask = new Task("update-id", "Updated Title", "Updated Description", true);
+    @Test
+    void createTask_MissingPriority_ReturnsBadRequest() {
+        // Given
+        TaskCreateDto invalidDto = new TaskCreateDto();
+        invalidDto.setTitle("Valid Title");
+        invalidDto.setDescription("Description");
+        // priority не установлен - должно вызвать ошибку валидации
+        invalidDto.setDueDate(LocalDate.now().plusDays(7));
 
-    // When
-    HttpEntity<Task> request = new HttpEntity<>(updatedTask);
-    ResponseEntity<Task> response = restTemplate.exchange(
-        baseUrl + "/update-id",
-        HttpMethod.PUT,
-        request,
-        Task.class
-    );
+        // When
+        ResponseEntity<String> response = restTemplate.postForEntity(baseUrl, invalidDto, String.class);
 
-    // Then
-    assertEquals(HttpStatus.OK, response.getStatusCode());
-    assertNotNull(response.getBody());
-    assertEquals("Updated Title", Objects.requireNonNull(response.getBody()).getTitle());
-    assertEquals("Updated Description", response.getBody().getDescription());
-    assertTrue(response.getBody().isCompleted());
-  }
+        // Then
+        assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
+    }
 
-  /**
-   * Тест: PUT /api/tasks/{id} - обновить задачу
-   * Негативный сценарий: задача не найдена
-   */
-  @Test
-  void updateTask_NonExistingId_ReturnsNotFound() {
-    // Given
-    Task updatedTask = new Task("non-existing", "Title", "Description", false);
+    @Test
+    void updateTask_ExistingId_ReturnsUpdatedTask() {
+        // Given
+        TaskCreateDto createDto = createValidDto("Old Title");
+        TaskResponseDto created = taskService.createTask(createDto);
 
-    // When
-    HttpEntity<Task> request = new HttpEntity<>(updatedTask);
-    ResponseEntity<Task> response = restTemplate.exchange(
-        baseUrl + "/non-existing",
-        HttpMethod.PUT,
-        request,
-        Task.class
-    );
+        TaskUpdateDto updateDto = new TaskUpdateDto();
+        updateDto.setTitle("Updated Title");
+        updateDto.setDescription("Updated Description");
+        updateDto.setCompleted(true);
 
-    // Then
-    assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
-  }
+        // When
+        HttpEntity<TaskUpdateDto> request = new HttpEntity<>(updateDto);
+        ResponseEntity<TaskResponseDto> response = restTemplate.exchange(
+            baseUrl + "/" + created.getId(),
+            HttpMethod.PUT,
+            request,
+            TaskResponseDto.class
+        );
 
-  /**
-   * Тест: DELETE /api/tasks/{id} - удалить задачу
-   * Позитивный сценарий: задача удалена
-   */
-  @Test
-  void deleteTask_ExistingId_ReturnsNoContent() {
-    // Given
-    Task task = new Task("delete-id", "To Delete", "Description", false);
-    taskRepository.save(task);
+        // Then
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertNotNull(response.getBody());
+        assertEquals("Updated Title", Objects.requireNonNull(response.getBody()).getTitle());
+        assertEquals("Updated Description", response.getBody().getDescription());
+        assertTrue(response.getBody().isCompleted());
+    }
 
-    // When
-    ResponseEntity<Void> response = restTemplate.exchange(
-        baseUrl + "/delete-id",
-        HttpMethod.DELETE,
-        null,
-        Void.class
-    );
+    @Test
+    void updateTask_NonExistingId_ReturnsNotFound() {
+        // Given
+        TaskUpdateDto updateDto = new TaskUpdateDto();
+        updateDto.setTitle("Title");
 
-    // Then
-    assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
+        // When
+        HttpEntity<TaskUpdateDto> request = new HttpEntity<>(updateDto);
+        ResponseEntity<TaskResponseDto> response = restTemplate.exchange(
+            baseUrl + "/non-existing",
+            HttpMethod.PUT,
+            request,
+            TaskResponseDto.class
+        );
 
-    // Проверяем что задача действительно удалена
-    ResponseEntity<Task> getResponse = restTemplate.getForEntity(baseUrl + "/delete-id", Task.class);
-    assertEquals(HttpStatus.NOT_FOUND, getResponse.getStatusCode());
-  }
+        // Then
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+    }
 
-  /**
-   * Тест: DELETE /api/tasks/{id} - удалить задачу
-   * Негативный сценарий: задача не найдена
-   */
-  @Test
-  void deleteTask_NonExistingId_ReturnsNotFound() {
-    // When
-    ResponseEntity<Void> response = restTemplate.exchange(
-        baseUrl + "/non-existing",
-        HttpMethod.DELETE,
-        null,
-        Void.class
-    );
+    @Test
+    void deleteTask_ExistingId_ReturnsNoContent() {
+        // Given
+        TaskCreateDto dto = createValidDto("To Delete");
+        TaskResponseDto created = taskService.createTask(dto);
 
-    // Then
-    assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
-  }
+        // When
+        ResponseEntity<Void> response = restTemplate.exchange(
+            baseUrl + "/" + created.getId(),
+            HttpMethod.DELETE,
+            null,
+            Void.class
+        );
+
+        // Then
+        assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
+
+        // Проверяем что задача действительно удалена
+        ResponseEntity<TaskResponseDto> getResponse = restTemplate.getForEntity(
+            baseUrl + "/" + created.getId(), TaskResponseDto.class);
+        assertEquals(HttpStatus.NOT_FOUND, getResponse.getStatusCode());
+    }
+
+    @Test
+    void deleteTask_NonExistingId_ReturnsNotFound() {
+        // When
+        ResponseEntity<Void> response = restTemplate.exchange(
+            baseUrl + "/non-existing",
+            HttpMethod.DELETE,
+            null,
+            Void.class
+        );
+
+        // Then
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
+    }
+
+    /**
+     * Вспомогательный метод для создания валидного DTO.
+     */
+    private TaskCreateDto createValidDto(String title) {
+        TaskCreateDto dto = new TaskCreateDto();
+        dto.setTitle(title);
+        dto.setDescription("Description for " + title);
+        dto.setPriority(Priority.HIGH);
+        dto.setDueDate(LocalDate.now().plusDays(7));
+        dto.setTags(java.util.Set.of("test"));
+        return dto;
+    }
 }

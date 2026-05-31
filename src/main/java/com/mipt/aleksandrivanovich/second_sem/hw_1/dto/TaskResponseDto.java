@@ -1,41 +1,23 @@
-package com.mipt.aleksandrivanovich.second_sem.hw_1.model;
+package com.mipt.aleksandrivanovich.second_sem.hw_1.dto;
 
-import jakarta.validation.constraints.NotBlank;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.model.Priority;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 /**
- * Модель задачи
+ * DTO для ответа клиенту.
  */
-public class Task {
+public class TaskResponseDto {
     private String id;
-
-    @NotBlank(message = "Title cannot be empty")
     private String title;
-
     private String description;
     private boolean completed;
-
     private LocalDateTime createdAt;
     private LocalDate dueDate;
     private Priority priority;
     private Set<String> tags;
-
-    public Task() {
-        this.createdAt = LocalDateTime.now();
-        this.tags = new HashSet<>();
-    }
-
-    public Task(String id, String title, String description, boolean completed) {
-        this();
-        this.id = id;
-        this.title = title;
-        this.description = description;
-        this.completed = completed;
-    }
 
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
@@ -60,27 +42,4 @@ public class Task {
 
     public Set<String> getTags() { return tags; }
     public void setTags(Set<String> tags) { this.tags = tags; }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Task task = (Task) o;
-        return completed == task.completed && Objects.equals(id, task.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, completed);
-    }
-
-    @Override
-    public String toString() {
-        return "Task{" +
-            "id='" + id + '\'' +
-            ", title='" + title + '\'' +
-            ", priority=" + priority +
-            ", completed=" + completed +
-            '}';
-    }
 }

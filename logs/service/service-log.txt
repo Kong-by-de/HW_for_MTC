@@ -128,3 +128,81 @@
 2026-02-28 08:34:16 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
 2026-02-28 08:34:16 - ▶️ START: TaskService.deleteTask(non-existing)
 2026-02-28 08:34:16 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: false
+2026-05-31 17:42:05 - ▶️ START: TaskService.updateTask(non-existing, com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto@4dfc9e4a)
+2026-05-31 17:42:05 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-05-31 17:42:05 - ▶️ START: TaskService.deleteTask(delete-id)
+2026-05-31 17:42:05 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: true
+2026-05-31 17:42:05 - ▶️ START: TaskService.getTaskById(delete-id)
+2026-05-31 17:42:05 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-05-31 17:42:05 - ▶️ START: TaskService.getTaskById(test-id)
+2026-05-31 17:42:05 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional[com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@7ac120f0]
+2026-05-31 17:42:05 - ▶️ START: TaskService.getAllTasks()
+2026-05-31 17:42:05 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@6055b7a5, com.mipt.aleksandrivanovi...
+2026-05-31 17:42:05 - ▶️ START: TaskService.updateTask(update-id, com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto@5d7bbdbc)
+2026-05-31 17:42:05 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms | Result: Optional[com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@594422cb]
+2026-05-31 17:42:05 - ▶️ START: TaskService.getTaskById(non-existing)
+2026-05-31 17:42:05 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-05-31 17:42:05 - ▶️ START: TaskService.getAllTasks()
+2026-05-31 17:42:05 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-05-31 17:42:05 - ▶️ START: TaskService.deleteTask(non-existing)
+2026-05-31 17:42:05 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: false
+2026-05-31 17:49:17 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@63b18f6a)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 1 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@60c7d74d
+2026-05-31 17:49:17 - ▶️ START: TaskService.updateTask(non-existing, com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto@60dc36a3)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 1 ms | Result: Optional.empty
+2026-05-31 17:49:17 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@3f0b5619)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@67afc9b6
+2026-05-31 17:49:17 - ▶️ START: TaskService.deleteTask(cc61f4db-ac66-4bc6-b781-972a8ea282f1)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: true
+2026-05-31 17:49:17 - ▶️ START: TaskService.getTaskById(cc61f4db-ac66-4bc6-b781-972a8ea282f1)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 1 ms | Result: Optional.empty
+2026-05-31 17:49:17 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@7ca7bddd)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@206e5183
+2026-05-31 17:49:17 - ▶️ START: TaskService.getTaskById(fc1317be-639d-4931-adbf-7b4aa00d7ab1)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional[com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@43918b19]
+2026-05-31 17:49:17 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@32eb38e5)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@73633230
+2026-05-31 17:49:17 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@21539796)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@215f8d7
+2026-05-31 17:49:17 - ▶️ START: TaskService.getAllTasks()
+2026-05-31 17:49:17 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@5616e094, com.mipt.aleksandrivanovi...
+2026-05-31 17:49:17 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@712213ed)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@58189132
+2026-05-31 17:49:17 - ▶️ START: TaskService.updateTask(6ed3c3db-a6db-483a-b7b8-b5a78b46e7ce, com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto@7e8fb178)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms | Result: Optional[com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@7ab02a71]
+2026-05-31 17:49:17 - ▶️ START: TaskService.getTaskById(non-existing)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-05-31 17:49:17 - ▶️ START: TaskService.getAllTasks()
+2026-05-31 17:49:17 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-05-31 17:49:17 - ▶️ START: TaskService.deleteTask(non-existing)
+2026-05-31 17:49:17 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: false
+2026-05-31 17:53:04 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@56a79ff8)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@47808a0d
+2026-05-31 17:53:04 - ▶️ START: TaskService.updateTask(non-existing, com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto@dc8c7a8)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 1 ms | Result: Optional.empty
+2026-05-31 17:53:04 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@6dadcf58)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@467421cc
+2026-05-31 17:53:04 - ▶️ START: TaskService.deleteTask(4fc4109f-61eb-4de6-a617-50158096a658)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 1 ms | Result: true
+2026-05-31 17:53:04 - ▶️ START: TaskService.getTaskById(4fc4109f-61eb-4de6-a617-50158096a658)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-05-31 17:53:04 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@2267b0bb)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@20505460
+2026-05-31 17:53:04 - ▶️ START: TaskService.getTaskById(493f2d76-5a28-4851-ac73-d5498752e912)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional[com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@50b07adf]
+2026-05-31 17:53:04 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@2dc77962)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@32bae609
+2026-05-31 17:53:04 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@106b476a)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@6dde913e
+2026-05-31 17:53:04 - ▶️ START: TaskService.getAllTasks()
+2026-05-31 17:53:04 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@66dba40e, com.mipt.aleksandrivanovi...
+2026-05-31 17:53:04 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@4964d801)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 1 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@b307030
+2026-05-31 17:53:04 - ▶️ START: TaskService.updateTask(c088f2be-85b2-4bad-b2a7-829f52e5f97d, com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto@435d4a72)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 0 ms | Result: Optional[com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@4762c6c1]
+2026-05-31 17:53:04 - ▶️ START: TaskService.getTaskById(non-existing)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 0 ms | Result: Optional.empty
+2026-05-31 17:53:04 - ▶️ START: TaskService.getAllTasks()
+2026-05-31 17:53:04 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-05-31 17:53:04 - ▶️ START: TaskService.deleteTask(non-existing)
+2026-05-31 17:53:04 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 0 ms | Result: false
