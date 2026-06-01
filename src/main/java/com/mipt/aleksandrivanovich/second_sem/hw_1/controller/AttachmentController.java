@@ -12,9 +12,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 
-/**
- * Контроллер для управления вложениями задач.
- */
 @RestController
 @RequestMapping("/api")
 public class AttachmentController {
@@ -25,12 +22,9 @@ public class AttachmentController {
         this.attachmentService = attachmentService;
     }
 
-    /**
-     * POST загрузка файла.
-     */
     @PostMapping("/tasks/{taskId}/attachments")
     public ResponseEntity<AttachmentResponseDto> uploadAttachment(
-        @PathVariable String taskId,
+        @PathVariable Long taskId,
         @RequestParam("file") MultipartFile file) {
 
         try {
@@ -41,9 +35,6 @@ public class AttachmentController {
         }
     }
 
-    /**
-     * GET скачивание файла.
-     */
     @GetMapping("/attachments/{attachmentId}")
     public ResponseEntity<Resource> downloadAttachment(@PathVariable Long attachmentId) {
         Resource resource = attachmentService.loadAsResource(attachmentId);
@@ -60,9 +51,6 @@ public class AttachmentController {
             .body(resource);
     }
 
-    /**
-     * DELETE удаление вложения.
-     */
     @DeleteMapping("/attachments/{attachmentId}")
     public ResponseEntity<Void> deleteAttachment(@PathVariable Long attachmentId) {
         boolean deleted = attachmentService.deleteAttachment(attachmentId);
@@ -72,11 +60,8 @@ public class AttachmentController {
         return ResponseEntity.notFound().build();
     }
 
-    /**
-     * GET список вложений задачи.
-     */
     @GetMapping("/tasks/{taskId}/attachments")
-    public ResponseEntity<List<AttachmentResponseDto>> getTaskAttachments(@PathVariable String taskId) {
+    public ResponseEntity<List<AttachmentResponseDto>> getTaskAttachments(@PathVariable Long taskId) {
         List<AttachmentResponseDto> attachments = attachmentService.getAttachmentsByTaskId(taskId);
         return ResponseEntity.ok(attachments);
     }

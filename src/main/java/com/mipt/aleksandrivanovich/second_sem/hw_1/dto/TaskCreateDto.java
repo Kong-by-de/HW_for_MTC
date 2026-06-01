@@ -9,11 +9,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
-import java.util.Set;
 
-/**
- * DTO для создания новой задачи.
- */
 @Schema(description = "Данные для создания новой задачи")
 public class TaskCreateDto {
 
@@ -27,16 +23,16 @@ public class TaskCreateDto {
     private String description;
 
     @FutureOrPresent(message = "Due date cannot be in the past", groups = OnCreate.class)
-    @Schema(description = "Дата выполнения задачи", example = "2025-01-20")
+    @Schema(description = "Дата выполнения задачи", example = "2026-06-07")
     private LocalDate dueDate;
 
     @NotNull(message = "Priority is required", groups = OnCreate.class)
     @Schema(description = "Приоритет задачи", example = "HIGH", requiredMode = Schema.RequiredMode.REQUIRED)
     private Priority priority;
 
-    @Size(max = 5, message = "Maximum 5 tags allowed", groups = OnCreate.class)
-    @Schema(description = "Теги задачи", example = "[\"важно\", \"срочно\"]")
-    private Set<String> tags;
+    @Size(max = 255, message = "Tags must not exceed 255 characters", groups = OnCreate.class)
+    @Schema(description = "Теги задачи (через запятую)", example = "важно,срочно")
+    private String tags;
 
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
@@ -50,6 +46,6 @@ public class TaskCreateDto {
     public Priority getPriority() { return priority; }
     public void setPriority(Priority priority) { this.priority = priority; }
 
-    public Set<String> getTags() { return tags; }
-    public void setTags(Set<String> tags) { this.tags = tags; }
+    public String getTags() { return tags; }
+    public void setTags(String tags) { this.tags = tags; }
 }

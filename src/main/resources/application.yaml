@@ -1,33 +1,68 @@
+spring:
+  application:
+    name: "Todo Manager"
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
 server:
   port: 8080
 
 app:
   name: "Todo Manager"
-  version: "1.0.0"
-
-spring:
-  servlet:
-    multipart:
-      max-file-size: 10MB
-      max-request-size: 10MB
-      enabled: true
-  profiles:
-    active: dev
+  version: "2.0.0"
 
 ---
 spring:
   config:
     activate:
       on-profile: dev
+  datasource:
+    url: jdbc:postgresql://localhost:5432/todo_db
+    username: postgres
+    password: postgres
   logging:
     level:
-      com.mipt.aleksandrivanovich.second_sem.hw_1: DEBUG
+      org.hibernate.SQL: DEBUG
+      org.hibernate.orm.jdbc.bind: TRACE
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    enabled: false
+  logging:
+    level:
+      root: WARN
+      org.hibernate.SQL: DEBUG
 
 ---
 spring:
   config:
     activate:
       on-profile: prod
-  logging:
-    level:
-      com.mipt.aleksandrivanovich.second_sem.hw_1: INFO
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
