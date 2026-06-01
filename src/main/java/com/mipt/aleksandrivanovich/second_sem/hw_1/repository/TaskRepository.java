@@ -1,53 +1,33 @@
 package com.mipt.aleksandrivanovich.second_sem.hw_1.repository;
 
+import com.mipt.aleksandrivanovich.second_sem.hw_1.model.Priority;
 import com.mipt.aleksandrivanovich.second_sem.hw_1.model.Task;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.List;
-import java.util.Optional;
 
-/**
- * Интерфейс репозитория для операций CRUD с задачами.
- * Определяет методы для работы с хранилищем задач.
- * Реализуется классами InMemoryTaskRepository и StubTaskRepository.
- */
-public interface TaskRepository {
+@Repository
+public interface TaskRepository extends JpaRepository<Task, Long> {
 
-  /**
-   * Сохраняет задачу в хранилище.
-   *
-   * @param task задача для сохранения
-   * @return сохраненная задача
-   */
-  Task save(Task task);
+    List<Task> findByCompleted(boolean completed);
 
-  /**
-   * Находит задачу по идентификатору.
-   *
-   * @param id идентификатор задачи
-   * @return Optional с задачей, если найдена, или пустой Optional
-   */
-  Optional<Task> findById(String id);
+    List<Task> findByPriority(Priority priority);
 
-  /**
-   * Возвращает все задачи из хранилища.
-   *
-   * @return список всех задач
-   */
-  List<Task> findAll();
+    List<Task> findByCompletedAndPriority(boolean completed, Priority priority);
 
-  /**
-   * Удаляет задачу по идентификатору.
-   *
-   * @param id идентификатор задачи для удаления
-   * @return true если задача была удалена, false если не найдена
-   */
-  boolean deleteById(String id);
+    @Query("SELECT t FROM Task t WHERE t.dueDate BETWEEN :startDate AND :endDate")
+    List<Task> findTasksDueInDateRange(@Param("startDate") LocalDate startDate, @Param("endDate") LocalDate endDate);
 
-  /**
-   * Проверяет наличие задачи по идентификатору.
-   *
-   * @param id идентификатор задачи
-   * @return true если задача существует в хранилище
-   */
-  boolean existsById(String id);
+    @Query("SELECT t FROM Task t WHERE t.dueDate <= :date")
+    List<Task> findTasksDueBefore(@Param("date") LocalDate date);
+
+    @Query("SELECT t FROM Task t WHERE t.title LIKE %:keyword%")
+    List<Task> searchByTitle(@Param("keyword") String keyword);
+
+    @Query("SELECT DISTINCT t FROM Task t LEFT JOIN FETCH t.attachments WHERE t.completed = :completed")
+    List<Task> findAllWithAttachmentsByCompleted(@Param("completed") boolean completed);
 }

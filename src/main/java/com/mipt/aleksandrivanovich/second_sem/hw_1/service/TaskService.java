@@ -11,19 +11,14 @@ import jakarta.annotation.PreDestroy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
-import java.util.UUID;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
-/**
- * Сервис для управления задачами.
- * Содержит бизнес-логику приложения и кэширование задач.
- */
 @Service
+@Transactional(readOnly = true) // По умолчанию транзакции только для чтения
 public class TaskService {
 
     private static final Logger logger = LoggerFactory.getLogger(TaskService.class);
@@ -31,101 +26,87 @@ public class TaskService {
     private final TaskRepository taskRepository;
     private final TaskMapper taskMapper;
 
-    private final Map<String, Task> taskCache = new ConcurrentHashMap<>();
-
-    /**
-     * Конструктор с инжекцией репозитория и маппера.
-     */
     public TaskService(TaskRepository taskRepository, TaskMapper taskMapper) {
         this.taskRepository = taskRepository;
         this.taskMapper = taskMapper;
-        logger.info("TaskService создан через конструктор");
     }
 
-    /**
-     * Метод инициализации, вызывается после создания бина.
-     * Загружает задачи из репозитория в кэш при старте приложения.
-     */
     @PostConstruct
     public void init() {
-        logger.info("@PostConstruct: Инициализация TaskService и загрузка кэша...");
-        List<Task> tasks = taskRepository.findAll();
-        for (Task task : tasks) {
-            taskCache.put(task.getId(), task);
-        }
-        logger.info("Кэш загружен: {} задач", taskCache.size());
+        logger.info("TaskService initialized");
     }
 
-    /**
-     * Метод очистки, вызывается перед уничтожением бина.
-     * Логирует статистику и освобождает ресурсы кэша.
-     */
     @PreDestroy
     public void cleanup() {
-        logger.info("@PreDestroy: Очистка ресурсов TaskService...");
-        logger.info("В кэше осталось задач: {}", taskCache.size());
-        taskCache.clear();
-        logger.info("Ресурсы освобождены");
+        logger.info("TaskService cleanup");
     }
 
-    /**
-     * Создаёт новую задачу из DTO.
-     */
+    @Transactional // Для записи нужна активная транзакция
     public TaskResponseDto createTask(TaskCreateDto dto) {
         Task task = taskMapper.toEntity(dto);
-        task.setId(UUID.randomUUID().toString());
         task.setCompleted(false);
-        task.setCreatedAt(java.time.LocalDateTime.now());
-
         Task savedTask = taskRepository.save(task);
         return taskMapper.toResponseDto(savedTask);
     }
 
-    /**
-     * Получает задачу по ID как ResponseDto.
-     */
-    public Optional<TaskResponseDto> getTaskById(String id) {
+    public Optional<TaskResponseDto> getTaskById(Long id) {
         return taskRepository.findById(id).map(taskMapper::toResponseDto);
     }
 
-    /**
-     * Возвращает все задачи как список ResponseDto.
-     */
     public List<TaskResponseDto> getAllTasks() {
         return taskRepository.findAll().stream()
             .map(taskMapper::toResponseDto)
             .collect(Collectors.toList());
     }
 
-    /**
-     * Обновляет задачу из DTO.
-     */
-    public Optional<TaskResponseDto> updateTask(String id, TaskUpdateDto dto) {
+    @Transactional
+    public Optional<TaskResponseDto> updateTask(Long id, TaskUpdateDto dto) {
         return taskRepository.findById(id).map(existingTask -> {
             Task updatedTask = taskMapper.updateEntity(dto, existingTask);
-            updatedTask.setId(id);
             taskRepository.save(updatedTask);
             return taskMapper.toResponseDto(updatedTask);
         });
     }
 
-    /**
-     * Удаляет задачу по ID.
-     */
-    public boolean deleteTask(String id) {
-        return taskRepository.deleteById(id);
+    @Transactional
+    public boolean deleteTask(Long id) {
+        if (taskRepository.existsById(id)) {
+            taskRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 
     /**
-     * Помечает задачу как выполненную.
+     * Демонстрация транзакций:
      */
-    public boolean completeTask(String id) {
-        return taskRepository.findById(id)
-            .map(task -> {
+    @Transactional(rollbackFor = Exception.class)
+    public void bulkCompleteTasks(List<Long> ids) {
+        logger.info("Начинаю пакетное обновление для ID: {}", ids);
+
+        for (Long id : ids) {
+            if (!taskRepository.existsById(id)) {
+                logger.error("Задача с ID {} не найдена. Откат транзакции!", id);
+                throw new RuntimeException("Task not found with id: " + id);
+            }
+        }
+
+        for (Long id : ids) {
+            taskRepository.findById(id).ifPresent(task -> {
                 task.setCompleted(true);
                 taskRepository.save(task);
-                return true;
-            })
-            .orElse(false);
+            });
+        }
+        logger.info("Пакетное обновление успешно завершено");
+    }
+
+    /**
+     * Решение проблемы N+1.
+     */
+    public List<TaskResponseDto> getTasksWithAttachments(boolean completed) {
+        List<Task> tasks = taskRepository.findAllWithAttachmentsByCompleted(completed);
+        return tasks.stream()
+            .map(taskMapper::toResponseDto)
+            .collect(Collectors.toList());
     }
 }

@@ -6,11 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
-import java.util.Set;
 
-/**
- * DTO для обновления задачи.
- */
 @Schema(description = "Данные для обновления задачи")
 public class TaskUpdateDto {
 
@@ -25,15 +21,15 @@ public class TaskUpdateDto {
     @Schema(description = "Статус выполнения", example = "true")
     private Boolean completed;
 
-    @Schema(description = "Дата выполнения", example = "2025-01-20")
+    @Schema(description = "Дата выполнения", example = "2026-06-07")
     private LocalDate dueDate;
 
     @Schema(description = "Приоритет задачи", example = "MEDIUM")
     private Priority priority;
 
-    @Size(max = 5, message = "Maximum 5 tags allowed", groups = OnUpdate.class)
-    @Schema(description = "Теги задачи", example = "[\"важно\"]")
-    private Set<String> tags;
+    @Size(max = 255, message = "Tags must not exceed 255 characters", groups = OnUpdate.class)
+    @Schema(description = "Теги задачи (через запятую)", example = "важно,срочно")
+    private String tags;
 
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
@@ -50,6 +46,6 @@ public class TaskUpdateDto {
     public Priority getPriority() { return priority; }
     public void setPriority(Priority priority) { this.priority = priority; }
 
-    public Set<String> getTags() { return tags; }
-    public void setTags(Set<String> tags) { this.tags = tags; }
+    public String getTags() { return tags; }
+    public void setTags(String tags) { this.tags = tags; }
 }

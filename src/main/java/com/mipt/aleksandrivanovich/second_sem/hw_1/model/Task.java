@@ -1,44 +1,66 @@
 package com.mipt.aleksandrivanovich.second_sem.hw_1.model;
 
-import jakarta.validation.constraints.NotBlank;
+import jakarta.persistence.*;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
 
-/**
- * Модель задачи
- */
+@Entity
+@Table(name = "task")
+@EntityListeners(AuditingEntityListener.class)
 public class Task {
-    private String id;
 
-    @NotBlank(message = "Title cannot be empty")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false, length = 100)
     private String title;
 
+    @Column(length = 500)
     private String description;
-    private boolean completed;
 
+    @Column(nullable = false)
+    private boolean completed = false;
+
+    @CreatedDate
+    @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
+
+    @LastModifiedDate
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
+
+    @Column(name = "due_date")
     private LocalDate dueDate;
+
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private Priority priority;
-    private Set<String> tags;
+
+    @Column(length = 255)
+    private String tags;
+
+    @OneToMany(mappedBy = "task", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private java.util.Set<TaskAttachment> attachments = new java.util.HashSet<>();
 
     public Task() {
         this.createdAt = LocalDateTime.now();
-        this.tags = new HashSet<>();
     }
 
-    public Task(String id, String title, String description, boolean completed) {
+    public Task(String title, String description, boolean completed) {
         this();
-        this.id = id;
         this.title = title;
         this.description = description;
         this.completed = completed;
     }
 
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id; }
 
     public String getTitle() { return title; }
     public void setTitle(String title) { this.title = title; }
@@ -52,32 +74,38 @@ public class Task {
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
 
+    public LocalDateTime getUpdatedAt() { return updatedAt; }
+    public void setUpdatedAt(LocalDateTime updatedAt) { this.updatedAt = updatedAt; }
+
     public LocalDate getDueDate() { return dueDate; }
     public void setDueDate(LocalDate dueDate) { this.dueDate = dueDate; }
 
     public Priority getPriority() { return priority; }
     public void setPriority(Priority priority) { this.priority = priority; }
 
-    public Set<String> getTags() { return tags; }
-    public void setTags(Set<String> tags) { this.tags = tags; }
+    public String getTags() { return tags; }
+    public void setTags(String tags) { this.tags = tags; }
+
+    public java.util.Set<TaskAttachment> getAttachments() { return attachments; }
+    public void setAttachments(java.util.Set<TaskAttachment> attachments) { this.attachments = attachments; }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Task task = (Task) o;
-        return completed == task.completed && Objects.equals(id, task.id);
+        return Objects.equals(id, task.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, completed);
+        return Objects.hash(id);
     }
 
     @Override
     public String toString() {
         return "Task{" +
-            "id='" + id + '\'' +
+            "id=" + id +
             ", title='" + title + '\'' +
             ", priority=" + priority +
             ", completed=" + completed +

@@ -1,88 +1,50 @@
 package com.mipt.aleksandrivanovich.second_sem.hw_1.service;
 
-import com.mipt.aleksandrivanovich.second_sem.hw_1.model.Task;
-import com.mipt.aleksandrivanovich.second_sem.hw_1.repository.TaskRepository;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
-/**
- * Сервис для демонстрации работы с несколькими репозиториями.
- * Показывает использование @Qualifier для явного выбора бина при инжекции.
- */
 @Service
+@Transactional(readOnly = true)
 public class TaskStatisticsService {
 
-  /**
-   * Основной репозиторий (инжектируется через @Primary).
-   */
-  private final TaskRepository primaryRepository;
+    private final JdbcTemplate jdbcTemplate;
 
-  /**
-   * Stub-репозиторий (инжектируется через @Qualifier).
-   */
-  private final TaskRepository stubRepository;
-
-  /**
-   * Конструктор с инжекцией двух разных репозиториев.
-   *
-   * @param primaryRepository основной репозиторий (с @Primary)
-   * @param stubRepository stub-репозиторий (с @Qualifier("stubTaskRepository"))
-   */
-  public TaskStatisticsService(
-      TaskRepository primaryRepository,
-      @Qualifier("stubTaskRepository") TaskRepository stubRepository) {
-    this.primaryRepository = primaryRepository;
-    this.stubRepository = stubRepository;
-  }
-
-  /**
-   * Сравнивает количество задач в двух репозиториях.
-   *
-   * @return строка с результатами сравнения
-   */
-  public String compareRepositories() {
-    long primaryCount = primaryRepository.findAll().size();
-    long stubCount = stubRepository.findAll().size();
-
-    return String.format(
-        "Primary repository: %d tasks, Stub repository: %d tasks",
-        primaryCount, stubCount
-    );
-  }
-
-  /**
-   * Возвращает все задачи из основного репозитория.
-   *
-   * @return список задач из primaryRepository
-   */
-  public List<Task> getTasksFromPrimary() {
-    return primaryRepository.findAll();
-  }
-
-  /**
-   * Возвращает все задачи из stub-репозитория.
-   *
-   * @return список задач из stubRepository
-   */
-  public List<Task> getTasksFromStub() {
-    return stubRepository.findAll();
-  }
-
-  /**
-   * Определяет, в каком репозитории находится задача по ID.
-   *
-   * @param id идентификатор задачи
-   * @return "primary", "stub" или "not found"
-   */
-  public String findTaskSource(String id) {
-    if (primaryRepository.existsById(id)) {
-      return "primary";
+    public TaskStatisticsService(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
     }
-    if (stubRepository.existsById(id)) {
-      return "stub";
+
+    public List<TaskPriorityCount> getTasksCountByPriority() {
+        String sql = "SELECT priority, COUNT(*) as count FROM task GROUP BY priority";
+
+        return jdbcTemplate.query(sql, new TaskPriorityCountRowMapper());
     }
-    return "not found";
-  }
+
+    private static class TaskPriorityCountRowMapper implements RowMapper<TaskPriorityCount> {
+        @Override
+        public TaskPriorityCount mapRow(ResultSet rs, int rowNum) throws SQLException {
+            return new TaskPriorityCount(
+                rs.getString("priority"),
+                rs.getLong("count")
+            );
+        }
+    }
+
+    public static class TaskPriorityCount {
+        private String priority;
+        private Long count;
+
+        public TaskPriorityCount(String priority, Long count) {
+            this.priority = priority;
+            this.count = count;
+        }
+
+        public String getPriority() { return priority; }
+        public Long getCount() { return count; }
+    }
 }

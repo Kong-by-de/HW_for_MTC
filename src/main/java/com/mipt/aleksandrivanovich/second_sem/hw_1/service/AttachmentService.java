@@ -1,8 +1,10 @@
 package com.mipt.aleksandrivanovich.second_sem.hw_1.service;
 
 import com.mipt.aleksandrivanovich.second_sem.hw_1.dto.AttachmentResponseDto;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.model.Task;
 import com.mipt.aleksandrivanovich.second_sem.hw_1.model.TaskAttachment;
 import com.mipt.aleksandrivanovich.second_sem.hw_1.repository.TaskAttachmentRepository;
+import com.mipt.aleksandrivanovich.second_sem.hw_1.repository.TaskRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.Resource;
@@ -21,19 +23,18 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-/**
- * Сервис для работы с вложениями задач.
- */
 @Service
 public class AttachmentService {
 
     private static final Logger logger = LoggerFactory.getLogger(AttachmentService.class);
 
     private final TaskAttachmentRepository attachmentRepository;
+    private final TaskRepository taskRepository;
     private final Path uploadDir;
 
-    public AttachmentService(TaskAttachmentRepository attachmentRepository) {
+    public AttachmentService(TaskAttachmentRepository attachmentRepository, TaskRepository taskRepository) {
         this.attachmentRepository = attachmentRepository;
+        this.taskRepository = taskRepository;
         this.uploadDir = Paths.get("uploads").toAbsolutePath().normalize();
 
         try {
@@ -43,10 +44,10 @@ public class AttachmentService {
         }
     }
 
-    /**
-     * Сохраняет файл для задачи.
-     */
-    public AttachmentResponseDto storeAttachment(String taskId, MultipartFile file) throws IOException {
+    public AttachmentResponseDto storeAttachment(Long taskId, MultipartFile file) throws IOException {
+        Task task = taskRepository.findById(taskId)
+            .orElseThrow(() -> new RuntimeException("Task not found with id: " + taskId));
+
         String originalFileName = file.getOriginalFilename();
         String extension = "";
         if (originalFileName != null && originalFileName.contains(".")) {
@@ -57,13 +58,10 @@ public class AttachmentService {
         Path targetPath = uploadDir.resolve(storedFileName);
         Files.copy(file.getInputStream(), targetPath, StandardCopyOption.REPLACE_EXISTING);
 
-        TaskAttachment attachment = new TaskAttachment();
-        attachment.setTaskId(taskId);
-        attachment.setFileName(originalFileName);
-        attachment.setStoredFileName(storedFileName);
-        attachment.setContentType(file.getContentType());
-        attachment.setSize(file.getSize());
-        attachment.setUploadedAt(LocalDateTime.now());
+        TaskAttachment attachment = new TaskAttachment(
+            task, originalFileName, storedFileName,
+            file.getContentType(), file.getSize()
+        );
 
         attachmentRepository.save(attachment);
 
@@ -76,17 +74,11 @@ public class AttachmentService {
         );
     }
 
-    /**
-     * Получает вложение по ID.
-     */
     public TaskAttachment getAttachment(Long attachmentId) {
         return attachmentRepository.findById(attachmentId)
             .orElseThrow(() -> new RuntimeException("Attachment not found with id: " + attachmentId));
     }
 
-    /**
-     * Загружает файл как Resource для скачивания.
-     */
     public Resource loadAsResource(Long attachmentId) {
         TaskAttachment attachment = getAttachment(attachmentId);
 
@@ -104,9 +96,6 @@ public class AttachmentService {
         }
     }
 
-    /**
-     * Удаляет вложение.
-     */
     public boolean deleteAttachment(Long attachmentId) {
         TaskAttachment attachment = attachmentRepository.findById(attachmentId)
             .orElse(null);
@@ -122,14 +111,11 @@ public class AttachmentService {
             logger.error("Could not delete file: {}", attachment.getStoredFileName(), e);
         }
 
-        // Удаляем запись из репозитория
-        return attachmentRepository.deleteById(attachmentId);
+        attachmentRepository.deleteById(attachmentId);
+        return true;
     }
 
-    /**
-     * Получает все вложения задачи.
-     */
-    public List<AttachmentResponseDto> getAttachmentsByTaskId(String taskId) {
+    public List<AttachmentResponseDto> getAttachmentsByTaskId(Long taskId) {
         return attachmentRepository.findByTaskId(taskId).stream()
             .map(att -> new AttachmentResponseDto(
                 att.getId(),
