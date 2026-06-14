@@ -364,3 +364,565 @@
 2026-06-01 16:32:46 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 1 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@3d3b1ee9
 2026-06-01 16:32:46 - ▶️ START: TaskStatisticsService.getTasksCountByPriority()
 2026-06-01 16:32:46 - ⏹️ END: TaskStatisticsService.getTasksCountByPriority | Status: SUCCESS | Duration: 5 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.service.TaskStatisticsService$TaskPriorityCount@38321e6...
+2026-06-14 12:31:29 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@493658fa)
+2026-06-14 12:31:29 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 88 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@31102e84
+2026-06-14 12:31:29 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@7fdfa8c2)
+2026-06-14 12:31:29 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@291be813
+2026-06-14 12:31:29 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@3b69ad19)
+2026-06-14 12:31:29 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@3aa6fef3
+2026-06-14 12:31:29 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@31429a0a)
+2026-06-14 12:31:29 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@3e843b50
+2026-06-14 12:31:29 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@52eaa71c)
+2026-06-14 12:31:29 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@1e06006f
+2026-06-14 12:31:31 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@4bd785f)
+2026-06-14 12:31:32 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 13 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@2f6c60c3
+2026-06-14 12:31:32 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@2b7ce06e)
+2026-06-14 12:31:32 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@20a4c67d
+2026-06-14 12:31:32 - ▶️ START: TaskService.bulkCompleteTasks([1, 2])
+2026-06-14 12:31:32 - ⏹️ END: TaskService.bulkCompleteTasks | Status: SUCCESS | Duration: 35 ms
+2026-06-14 12:31:32 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@5a65140d)
+2026-06-14 12:31:32 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 5 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@39a7de2a
+2026-06-14 12:31:32 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@4feb580)
+2026-06-14 12:31:32 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@7c8fed20
+2026-06-14 12:31:32 - ▶️ START: TaskService.bulkCompleteTasks([3, 999])
+2026-06-14 12:31:32 - ⏹️ END: TaskService.bulkCompleteTasks | Status: ERROR | Duration: 6 ms
+2026-06-14 12:31:32 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@780ef01e)
+2026-06-14 12:31:32 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@3d85a2a0
+2026-06-14 12:31:32 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@4ca683a5)
+2026-06-14 12:31:32 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@baf2078
+2026-06-14 12:31:32 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@61c00e9)
+2026-06-14 12:31:32 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@1b442652
+2026-06-14 12:31:32 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@b5e643a)
+2026-06-14 12:31:32 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 1 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@70558c8b
+2026-06-14 12:31:32 - ▶️ START: TaskStatisticsService.getTasksCountByPriority()
+2026-06-14 12:31:32 - ⏹️ END: TaskStatisticsService.getTasksCountByPriority | Status: SUCCESS | Duration: 6 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.service.TaskStatisticsService$TaskPriorityCount@71bf8bc...
+2026-06-14 12:54:58 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@22479db5)
+2026-06-14 12:54:58 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 100 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@205693af
+2026-06-14 12:54:58 - ▶️ START: TaskService.updateTask(999, com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto@16440b78)
+2026-06-14 12:54:58 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 3 ms | Result: Optional.empty
+2026-06-14 12:54:58 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@64926758)
+2026-06-14 12:54:58 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 5 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@7e282ec9
+2026-06-14 12:54:58 - ▶️ START: TaskService.deleteTask(2)
+2026-06-14 12:54:58 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 68 ms | Result: true
+2026-06-14 12:54:58 - ▶️ START: TaskService.getTaskById(2)
+2026-06-14 12:54:58 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 2 ms | Result: Optional.empty
+2026-06-14 12:54:58 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@17c8dbae)
+2026-06-14 12:54:58 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@45147221
+2026-06-14 12:54:58 - ▶️ START: TaskService.getTaskById(3)
+2026-06-14 12:54:58 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 2 ms | Result: Optional[com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@72634d4d]
+2026-06-14 12:54:58 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@77ed1878)
+2026-06-14 12:54:58 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@1389c566
+2026-06-14 12:54:58 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@204e7223)
+2026-06-14 12:54:58 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@59708aaa
+2026-06-14 12:54:58 - ▶️ START: TaskService.getAllTasks()
+2026-06-14 12:54:58 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 5 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@491deceb, com.mipt.aleksandrivanovi...
+2026-06-14 12:54:59 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@10ce2a4d)
+2026-06-14 12:54:59 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@25e0a88c
+2026-06-14 12:54:59 - ▶️ START: TaskService.updateTask(6, com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto@56b6926)
+2026-06-14 12:54:59 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 7 ms | Result: Optional[com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@247ccca9]
+2026-06-14 12:54:59 - ▶️ START: TaskService.getTaskById(999)
+2026-06-14 12:54:59 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 9 ms | Result: Optional.empty
+2026-06-14 12:54:59 - ▶️ START: TaskService.getAllTasks()
+2026-06-14 12:54:59 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 4 ms | Result: []
+2026-06-14 12:54:59 - ▶️ START: TaskService.deleteTask(999)
+2026-06-14 12:54:59 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 4 ms | Result: false
+2026-06-14 12:55:02 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@b223e47)
+2026-06-14 12:55:02 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 19 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@724c7965
+2026-06-14 12:55:02 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@5b7b8a84)
+2026-06-14 12:55:02 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@1dc4e3f1
+2026-06-14 12:55:02 - ▶️ START: TaskService.bulkCompleteTasks([1, 2])
+2026-06-14 12:55:02 - ⏹️ END: TaskService.bulkCompleteTasks | Status: SUCCESS | Duration: 7 ms
+2026-06-14 12:55:02 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@1cd9fd72)
+2026-06-14 12:55:02 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@5c6d0169
+2026-06-14 12:55:02 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@290162ac)
+2026-06-14 12:55:02 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@6546f3f0
+2026-06-14 12:55:02 - ▶️ START: TaskService.bulkCompleteTasks([3, 999])
+2026-06-14 12:55:02 - ⏹️ END: TaskService.bulkCompleteTasks | Status: ERROR | Duration: 5 ms
+2026-06-14 12:55:02 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@5b2dc580)
+2026-06-14 12:55:02 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@5650911e
+2026-06-14 12:55:02 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@3175b9e3)
+2026-06-14 12:55:02 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 0 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@4c2e5875
+2026-06-14 12:55:02 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@6a792df3)
+2026-06-14 12:55:02 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@2f28710a
+2026-06-14 12:55:02 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@48e7a9df)
+2026-06-14 12:55:02 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@7d527572
+2026-06-14 12:55:02 - ▶️ START: TaskStatisticsService.getTasksCountByPriority()
+2026-06-14 12:55:02 - ⏹️ END: TaskStatisticsService.getTasksCountByPriority | Status: SUCCESS | Duration: 5 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.service.TaskStatisticsService$TaskPriorityCount@5696e11...
+2026-06-14 12:55:48 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@6e9cf13c)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 134 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@353a2078
+2026-06-14 12:55:48 - ▶️ START: TaskService.updateTask(999, com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto@56396d62)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 2 ms | Result: Optional.empty
+2026-06-14 12:55:48 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@4e27eb57)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@17c8dbae
+2026-06-14 12:55:48 - ▶️ START: TaskService.deleteTask(2)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 38 ms | Result: true
+2026-06-14 12:55:48 - ▶️ START: TaskService.getTaskById(2)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 2 ms | Result: Optional.empty
+2026-06-14 12:55:48 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@4cd85d52)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 5 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@e8b6bb7
+2026-06-14 12:55:48 - ▶️ START: TaskService.getTaskById(3)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 1 ms | Result: Optional[com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@207bdc1c]
+2026-06-14 12:55:48 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@6e3a9e71)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@7b742ec1
+2026-06-14 12:55:48 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@7e5ed9ce)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@6b25f5df
+2026-06-14 12:55:48 - ▶️ START: TaskService.getAllTasks()
+2026-06-14 12:55:48 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 3 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@427492fb, com.mipt.aleksandrivanovi...
+2026-06-14 12:55:48 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@58b709c9)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 6 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@bc8921c
+2026-06-14 12:55:48 - ▶️ START: TaskService.updateTask(6, com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto@66bd9ba8)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 5 ms | Result: Optional[com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@1a9f76cf]
+2026-06-14 12:55:48 - ▶️ START: TaskService.getTaskById(999)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 1 ms | Result: Optional.empty
+2026-06-14 12:55:48 - ▶️ START: TaskService.getAllTasks()
+2026-06-14 12:55:48 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 3 ms | Result: []
+2026-06-14 12:55:48 - ▶️ START: TaskService.deleteTask(999)
+2026-06-14 12:55:48 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 2 ms | Result: false
+2026-06-14 12:55:52 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@1cd1d7f5)
+2026-06-14 12:55:52 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 13 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@61fd8c74
+2026-06-14 12:55:52 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@4c2e5875)
+2026-06-14 12:55:52 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@77ab932e
+2026-06-14 12:55:52 - ▶️ START: TaskService.bulkCompleteTasks([1, 2])
+2026-06-14 12:55:52 - ⏹️ END: TaskService.bulkCompleteTasks | Status: SUCCESS | Duration: 7 ms
+2026-06-14 12:55:52 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@253417d7)
+2026-06-14 12:55:52 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@74afb4b7
+2026-06-14 12:55:52 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@1953705)
+2026-06-14 12:55:52 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@3d07f310
+2026-06-14 12:55:52 - ▶️ START: TaskService.bulkCompleteTasks([3, 999])
+2026-06-14 12:55:52 - ⏹️ END: TaskService.bulkCompleteTasks | Status: ERROR | Duration: 5 ms
+2026-06-14 12:55:52 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@5bd817)
+2026-06-14 12:55:52 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@3f3bdc7e
+2026-06-14 12:55:52 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@3b6c712a)
+2026-06-14 12:55:52 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 1 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@795fe754
+2026-06-14 12:55:52 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@5357bed9)
+2026-06-14 12:55:52 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 1 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@7aa83ac7
+2026-06-14 12:55:52 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@1e1634fa)
+2026-06-14 12:55:52 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@184a474b
+2026-06-14 12:55:52 - ▶️ START: TaskStatisticsService.getTasksCountByPriority()
+2026-06-14 12:55:52 - ⏹️ END: TaskStatisticsService.getTasksCountByPriority | Status: SUCCESS | Duration: 4 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.service.TaskStatisticsService$TaskPriorityCount@37c654a...
+2026-06-14 14:35:04 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@3fd5efca)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 52 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@24bbeb2
+2026-06-14 14:35:04 - ▶️ START: TaskService.updateTask(999, com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto@b5c6e01)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 1 ms | Result: Optional.empty
+2026-06-14 14:35:04 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@6d4d4108)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@10eb9604
+2026-06-14 14:35:04 - ▶️ START: TaskService.deleteTask(2)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 62 ms | Result: true
+2026-06-14 14:35:04 - ▶️ START: TaskService.getTaskById(2)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 2 ms | Result: Optional.empty
+2026-06-14 14:35:04 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@4cd21fb4)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@46202302
+2026-06-14 14:35:04 - ▶️ START: TaskService.getTaskById(3)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 2 ms | Result: Optional[com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@1e0ef2ec]
+2026-06-14 14:35:04 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@4415b9fa)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@5f8958af
+2026-06-14 14:35:04 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@439e956c)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@239d9b74
+2026-06-14 14:35:04 - ▶️ START: TaskService.getAllTasks()
+2026-06-14 14:35:04 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 4 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@789dc4da, com.mipt.aleksandrivanovi...
+2026-06-14 14:35:04 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@2e724561)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@1adf492b
+2026-06-14 14:35:04 - ▶️ START: TaskService.updateTask(6, com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskUpdateDto@441151b1)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.updateTask | Status: SUCCESS | Duration: 10 ms | Result: Optional[com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@7de3ea24]
+2026-06-14 14:35:04 - ▶️ START: TaskService.getTaskById(999)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.getTaskById | Status: SUCCESS | Duration: 3 ms | Result: Optional.empty
+2026-06-14 14:35:04 - ▶️ START: TaskService.getAllTasks()
+2026-06-14 14:35:04 - ⏹️ END: TaskService.getAllTasks | Status: SUCCESS | Duration: 2 ms | Result: []
+2026-06-14 14:35:04 - ▶️ START: TaskService.deleteTask(999)
+2026-06-14 14:35:04 - ⏹️ END: TaskService.deleteTask | Status: SUCCESS | Duration: 2 ms | Result: false
+2026-06-14 14:35:07 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@443d9ede)
+2026-06-14 14:35:07 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 10 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@68a4ecc7
+2026-06-14 14:35:07 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@4ca85c2d)
+2026-06-14 14:35:07 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@7e10d7db
+2026-06-14 14:35:07 - ▶️ START: TaskService.bulkCompleteTasks([1, 2])
+2026-06-14 14:35:07 - ⏹️ END: TaskService.bulkCompleteTasks | Status: SUCCESS | Duration: 6 ms
+2026-06-14 14:35:07 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@b395a52)
+2026-06-14 14:35:07 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@72e30fa
+2026-06-14 14:35:07 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@26181fec)
+2026-06-14 14:35:07 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@2e96b7f6
+2026-06-14 14:35:07 - ▶️ START: TaskService.bulkCompleteTasks([3, 999])
+2026-06-14 14:35:07 - ⏹️ END: TaskService.bulkCompleteTasks | Status: ERROR | Duration: 4 ms
+2026-06-14 14:35:07 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@1c441b38)
+2026-06-14 14:35:07 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@399f3ea3
+2026-06-14 14:35:07 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@734e5cd6)
+2026-06-14 14:35:07 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@5ef7a514
+2026-06-14 14:35:07 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@3c846b00)
+2026-06-14 14:35:07 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@3c7ddb2d
+2026-06-14 14:35:07 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@cdae79d)
+2026-06-14 14:35:07 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@67edf70a
+2026-06-14 14:35:07 - ▶️ START: TaskStatisticsService.getTasksCountByPriority()
+2026-06-14 14:35:07 - ⏹️ END: TaskStatisticsService.getTasksCountByPriority | Status: SUCCESS | Duration: 4 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.service.TaskStatisticsService$TaskPriorityCount@52d2c7d...
+2026-06-14 14:44:05 - ▶️ START: TasksGatewayService.createTask(New Task, false)
+2026-06-14 14:44:05 - ⏹️ END: TasksGatewayService.createTask | Status: ERROR | Duration: 8 ms
+2026-06-14 14:44:05 - ▶️ START: TasksGatewayService.createTaskFallback(New Task, false, java.lang.IllegalArgumentException: URI is not absolute)
+2026-06-14 14:44:05 - ⏹️ END: TasksGatewayService.createTaskFallback | Status: SUCCESS | Duration: 0 ms | Result: ExternalTaskDto[id=-1, title=Fallback: New Task, completed=false]
+2026-06-14 14:44:06 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@7fca736)
+2026-06-14 14:44:06 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 86 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@53da3955
+2026-06-14 14:44:06 - ▶️ START: TasksGatewayService.deleteTask(1)
+2026-06-14 14:44:06 - ⏹️ END: TasksGatewayService.deleteTask | Status: ERROR | Duration: 0 ms
+2026-06-14 14:44:06 - ▶️ START: TasksGatewayService.deleteTaskFallback(1, java.lang.IllegalArgumentException: URI is not absolute)
+2026-06-14 14:44:06 - ⏹️ END: TasksGatewayService.deleteTaskFallback | Status: SUCCESS | Duration: 0 ms
+2026-06-14 14:44:06 - ▶️ START: TasksGatewayService.getTaskFallback(1, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 14:44:06 - ⏹️ END: TasksGatewayService.getTaskFallback | Status: SUCCESS | Duration: 1 ms | Result: ExternalTaskDto[id=1, title=Fallback Task, completed=false]
+2026-06-14 14:44:06 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@46b7b94b)
+2026-06-14 14:44:06 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@22f82cd8
+2026-06-14 14:44:06 - ▶️ START: TasksGatewayService.getTaskFallback(2, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 14:44:06 - ⏹️ END: TasksGatewayService.getTaskFallback | Status: SUCCESS | Duration: 0 ms | Result: ExternalTaskDto[id=2, title=Fallback Task, completed=false]
+2026-06-14 14:44:06 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@5e38fba9)
+2026-06-14 14:44:06 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@6d9c791
+2026-06-14 14:44:06 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@7ec33496)
+2026-06-14 14:44:06 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@254d2871
+2026-06-14 14:44:06 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 14:44:06 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 1 ms | Result: []
+2026-06-14 14:44:06 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@35e246b2)
+2026-06-14 14:44:06 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@18bfbcd2
+2026-06-14 14:44:06 - ▶️ START: TasksGatewayService.getTaskFallback(999, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 14:44:06 - ⏹️ END: TasksGatewayService.getTaskFallback | Status: SUCCESS | Duration: 0 ms | Result: ExternalTaskDto[id=999, title=Fallback Task, completed=false]
+2026-06-14 14:44:06 - ▶️ START: TasksGatewayService.createTaskFallback(Valid Title, false, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 14:44:06 - ⏹️ END: TasksGatewayService.createTaskFallback | Status: SUCCESS | Duration: 0 ms | Result: ExternalTaskDto[id=-1, title=Fallback: Valid Title, completed=false]
+2026-06-14 14:44:06 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 14:44:06 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 14:44:06 - ▶️ START: TasksGatewayService.deleteTaskFallback(999, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 14:44:06 - ⏹️ END: TasksGatewayService.deleteTaskFallback | Status: SUCCESS | Duration: 0 ms
+2026-06-14 14:44:09 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@e831c41)
+2026-06-14 14:44:09 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 12 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@39f8db0e
+2026-06-14 14:44:09 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@2794e6d3)
+2026-06-14 14:44:09 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@14d953ce
+2026-06-14 14:44:09 - ▶️ START: TaskService.bulkCompleteTasks([1, 2])
+2026-06-14 14:44:10 - ⏹️ END: TaskService.bulkCompleteTasks | Status: SUCCESS | Duration: 59 ms
+2026-06-14 14:44:10 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@7da21834)
+2026-06-14 14:44:10 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@6830b16d
+2026-06-14 14:44:10 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@5f12058)
+2026-06-14 14:44:10 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@2fc37aad
+2026-06-14 14:44:10 - ▶️ START: TaskService.bulkCompleteTasks([3, 999])
+2026-06-14 14:44:10 - ⏹️ END: TaskService.bulkCompleteTasks | Status: ERROR | Duration: 6 ms
+2026-06-14 14:44:10 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@1ba1daf)
+2026-06-14 14:44:10 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@1812c4f8
+2026-06-14 14:44:10 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@3931325f)
+2026-06-14 14:44:10 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@6d1c20f
+2026-06-14 14:44:10 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@683f364)
+2026-06-14 14:44:10 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 6 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@439eb934
+2026-06-14 14:44:10 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@22431593)
+2026-06-14 14:44:10 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 5 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@7c1dd4a5
+2026-06-14 14:44:10 - ▶️ START: TaskStatisticsService.getTasksCountByPriority()
+2026-06-14 14:44:10 - ⏹️ END: TaskStatisticsService.getTasksCountByPriority | Status: SUCCESS | Duration: 9 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.service.TaskStatisticsService$TaskPriorityCount@723cab4...
+2026-06-14 14:47:44 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@4ff43de)
+2026-06-14 14:47:44 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 15 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@39a00675
+2026-06-14 14:47:44 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@59aba9b3)
+2026-06-14 14:47:44 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 1 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@1b4c8306
+2026-06-14 14:47:44 - ▶️ START: TaskService.bulkCompleteTasks([1, 2])
+2026-06-14 14:47:45 - ⏹️ END: TaskService.bulkCompleteTasks | Status: SUCCESS | Duration: 22 ms
+2026-06-14 14:47:45 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@6d97c8aa)
+2026-06-14 14:47:45 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@4432c7bd
+2026-06-14 14:47:45 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@6cd4b0da)
+2026-06-14 14:47:45 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@2358a9f9
+2026-06-14 14:47:45 - ▶️ START: TaskService.bulkCompleteTasks([3, 999])
+2026-06-14 14:47:45 - ⏹️ END: TaskService.bulkCompleteTasks | Status: ERROR | Duration: 5 ms
+2026-06-14 14:47:45 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@4006d0cb)
+2026-06-14 14:47:45 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@6160ae57
+2026-06-14 14:47:45 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@17896612)
+2026-06-14 14:47:45 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 3 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@48efa366
+2026-06-14 14:47:45 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@1487c3b3)
+2026-06-14 14:47:45 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@551e7852
+2026-06-14 14:47:45 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@75abea6)
+2026-06-14 14:47:45 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@5c4f1961
+2026-06-14 14:47:45 - ▶️ START: TaskStatisticsService.getTasksCountByPriority()
+2026-06-14 14:47:45 - ⏹️ END: TaskStatisticsService.getTasksCountByPriority | Status: SUCCESS | Duration: 11 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.service.TaskStatisticsService$TaskPriorityCount@4db6794...
+2026-06-14 14:49:29 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@14c5f96)
+2026-06-14 14:49:29 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 26 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@651c826c
+2026-06-14 14:49:29 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@10323056)
+2026-06-14 14:49:29 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 2 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@623e8e88
+2026-06-14 14:49:29 - ▶️ START: TaskService.bulkCompleteTasks([1, 2])
+2026-06-14 14:49:30 - ⏹️ END: TaskService.bulkCompleteTasks | Status: SUCCESS | Duration: 52 ms
+2026-06-14 14:49:30 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@9443150)
+2026-06-14 14:49:30 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@1daf016d
+2026-06-14 14:49:30 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@be1f3d6)
+2026-06-14 14:49:30 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 6 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@20de2518
+2026-06-14 14:49:30 - ▶️ START: TaskService.bulkCompleteTasks([3, 999])
+2026-06-14 14:49:30 - ⏹️ END: TaskService.bulkCompleteTasks | Status: ERROR | Duration: 13 ms
+2026-06-14 14:49:30 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@44465b22)
+2026-06-14 14:49:30 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 5 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@2d1c2fe7
+2026-06-14 14:49:30 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@1b98f595)
+2026-06-14 14:49:30 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 5 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@71ec5154
+2026-06-14 14:49:30 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@6786a21d)
+2026-06-14 14:49:30 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@57f995a4
+2026-06-14 14:49:30 - ▶️ START: TaskService.createTask(com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskCreateDto@5ed930d6)
+2026-06-14 14:49:30 - ⏹️ END: TaskService.createTask | Status: SUCCESS | Duration: 4 ms | Result: com.mipt.aleksandrivanovich.second_sem.hw_1.dto.TaskResponseDto@5d71baf8
+2026-06-14 14:49:30 - ▶️ START: TaskStatisticsService.getTasksCountByPriority()
+2026-06-14 14:49:30 - ⏹️ END: TaskStatisticsService.getTasksCountByPriority | Status: SUCCESS | Duration: 9 ms | Result: [com.mipt.aleksandrivanovich.second_sem.hw_1.service.TaskStatisticsService$TaskPriorityCount@256a1f2...
+2026-06-14 15:02:35 - ▶️ START: TasksGatewayService.createTask(Test Task, false)
+2026-06-14 15:02:35 - ⏹️ END: TasksGatewayService.createTask | Status: ERROR | Duration: 9 ms
+2026-06-14 15:02:35 - ▶️ START: TasksGatewayService.createTaskFallback(Test Task, false, java.lang.IllegalArgumentException: URI is not absolute)
+2026-06-14 15:02:35 - ⏹️ END: TasksGatewayService.createTaskFallback | Status: SUCCESS | Duration: 0 ms | Result: ExternalTaskDto[id=-1, title=Fallback: Test Task, completed=false]
+2026-06-14 15:02:41 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:02:41 - ⏹️ END: TasksGatewayService.getTasks | Status: ERROR | Duration: 2 ms
+2026-06-14 15:02:41 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, java.lang.IllegalArgumentException: URI is not absolute)
+2026-06-14 15:02:41 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:02:52 - ▶️ START: TasksGatewayService.getTask(1)
+2026-06-14 15:02:52 - ⏹️ END: TasksGatewayService.getTask | Status: ERROR | Duration: 1 ms
+2026-06-14 15:02:52 - ▶️ START: TasksGatewayService.getTaskFallback(1, java.lang.IllegalArgumentException: URI is not absolute)
+2026-06-14 15:02:52 - ⏹️ END: TasksGatewayService.getTaskFallback | Status: SUCCESS | Duration: 0 ms | Result: ExternalTaskDto[id=1, title=Fallback Task, completed=false]
+2026-06-14 15:08:01 - ▶️ START: TasksGatewayService.createTask(Test Task, false)
+2026-06-14 15:08:01 - ⏹️ END: TasksGatewayService.createTask | Status: SUCCESS | Duration: 49 ms | Result: ExternalTaskDto[id=1, title=Test Task, completed=false]
+2026-06-14 15:08:16 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:08:16 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 13 ms | Result: [ExternalTaskDto[id=1, title=Test Task, completed=false]]
+2026-06-14 15:08:23 - ▶️ START: TasksGatewayService.getTask(1)
+2026-06-14 15:08:23 - ⏹️ END: TasksGatewayService.getTask | Status: SUCCESS | Duration: 5 ms | Result: ExternalTaskDto[id=1, title=Test Task, completed=false]
+2026-06-14 15:10:45 - ▶️ START: TasksGatewayService.getTasks(false, 10)
+2026-06-14 15:10:45 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 7 ms | Result: [ExternalTaskDto[id=1, title=Test Task, completed=false]]
+2026-06-14 15:10:53 - ▶️ START: TasksGatewayService.deleteTask(1)
+2026-06-14 15:10:53 - ⏹️ END: TasksGatewayService.deleteTask | Status: SUCCESS | Duration: 5 ms
+2026-06-14 15:10:58 - ▶️ START: TasksGatewayService.getTask(999)
+2026-06-14 15:10:58 - ⏹️ END: TasksGatewayService.getTask | Status: ERROR | Duration: 11 ms
+2026-06-14 15:10:58 - ▶️ START: TasksGatewayService.getTaskFallback(999, com.mipt.aleksandrivanovich.second_sem.hw_1.exception.TaskNotFoundException: Task not found)
+2026-06-14 15:10:58 - ⏹️ END: TasksGatewayService.getTaskFallback | Status: SUCCESS | Duration: 0 ms | Result: ExternalTaskDto[id=999, title=Fallback Task, completed=false]
+2026-06-14 15:19:29 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:19:29 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 74 ms | Result: []
+2026-06-14 15:19:29 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:19:29 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 9 ms | Result: []
+2026-06-14 15:19:29 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:19:29 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:19:29 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:19:29 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:19:29 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:19:29 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:19:49 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:19:49 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 6 ms | Result: []
+2026-06-14 15:19:49 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:19:49 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 6 ms | Result: []
+2026-06-14 15:19:49 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:19:49 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:19:49 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:19:49 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:19:49 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:19:49 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:19:49 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:19:49 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:19:49 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:19:49 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:19:49 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:19:49 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:19:49 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:19:49 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:19:49 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:19:49 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:28:20 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:28:20 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 71 ms | Result: []
+2026-06-14 15:28:20 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:28:20 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 9 ms | Result: []
+2026-06-14 15:28:20 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:28:20 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 15:28:20 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:28:20 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:28:20 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:28:20 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:28:27 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:28:27 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 5 ms | Result: []
+2026-06-14 15:28:27 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:28:27 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 4 ms | Result: []
+2026-06-14 15:28:27 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:28:27 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 15:28:27 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:28:27 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:28:27 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:28:27 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:28:27 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:28:27 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:28:27 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:28:27 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:28:27 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:28:27 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:28:27 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:28:27 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:28:27 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:28:27 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:30:54 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:30:54 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 74 ms | Result: []
+2026-06-14 15:30:54 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:30:54 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 9 ms | Result: []
+2026-06-14 15:30:54 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:30:54 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:30:54 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:30:54 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:30:55 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:30:55 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 15:31:00 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:31:00 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:31:00 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:31:00 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:31:00 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:31:00 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 15:31:00 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:31:00 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 15:31:00 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:31:00 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:31:00 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:31:00 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 15:31:01 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:31:01 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:31:01 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:31:01 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:31:01 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:31:01 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 15:31:01 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:31:01 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 15:33:41 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:33:41 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 76 ms | Result: []
+2026-06-14 15:33:41 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:33:41 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 6 ms | Result: []
+2026-06-14 15:33:42 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:33:42 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:33:42 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:33:42 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:33:42 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:33:42 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:33:47 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:33:47 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 4 ms | Result: []
+2026-06-14 15:33:48 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:33:48 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 4 ms | Result: []
+2026-06-14 15:33:48 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:33:48 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:33:48 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:33:48 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:33:48 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:33:48 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:33:48 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:33:48 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:33:48 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:33:48 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:33:48 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:33:48 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:33:48 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:33:48 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:33:48 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.circuitbreaker.CallNotPermittedException: CircuitBreaker 'externalApi' is OPEN and does not permit further calls)
+2026-06-14 15:33:48 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: SUCCESS | Duration: 0 ms | Result: []
+2026-06-14 15:41:41 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:41:41 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 81 ms | Result: []
+2026-06-14 15:41:42 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:41:42 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 14 ms | Result: []
+2026-06-14 15:41:42 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:41:42 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 15:41:42 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:41:42 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:41:42 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:41:42 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:45:58 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:45:58 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 74 ms | Result: []
+2026-06-14 15:45:58 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:45:58 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 8 ms | Result: []
+2026-06-14 15:45:59 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:45:59 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:45:59 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:45:59 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:45:59 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:45:59 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:57:35 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:57:35 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 9 ms | Result: []
+2026-06-14 15:57:35 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 15:57:35 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 12 ms | Result: []
+2026-06-14 15:57:36 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:57:36 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:57:36 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:57:36 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:57:36 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:57:36 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:57:36 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:57:36 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:57:36 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:57:36 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:57:36 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:57:36 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:57:36 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:57:36 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 15:57:36 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 15:57:36 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:00:58 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 16:00:58 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 6 ms | Result: []
+2026-06-14 16:00:58 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 16:00:58 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 6 ms | Result: []
+2026-06-14 16:00:59 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:00:59 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 16:00:59 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:00:59 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:00:59 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:00:59 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:00:59 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:00:59 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:00:59 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:00:59 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:00:59 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:00:59 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 16:00:59 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:00:59 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:00:59 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:00:59 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 16:10:40 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 16:10:40 - ⏹️ END: TasksGatewayService.getTasks | Status: ERROR | Duration: 35 ms
+2026-06-14 16:10:40 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, com.mipt.aleksandrivanovich.second_sem.hw_1.exception.ExternalApiException: External API error: 500 INTERNAL_SERVER_ERROR)
+2026-06-14 16:10:40 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:10:40 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 16:10:40 - ⏹️ END: TasksGatewayService.getTasks | Status: ERROR | Duration: 11 ms
+2026-06-14 16:10:40 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, com.mipt.aleksandrivanovich.second_sem.hw_1.exception.ExternalApiException: External API error: 500 INTERNAL_SERVER_ERROR)
+2026-06-14 16:10:40 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 16:10:41 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:10:41 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:10:41 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:10:41 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:10:41 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:10:41 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:10:41 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:10:41 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:10:41 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 16:10:41 - ⏹️ END: TasksGatewayService.getTasks | Status: ERROR | Duration: 7 ms
+2026-06-14 16:10:41 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, com.mipt.aleksandrivanovich.second_sem.hw_1.exception.ExternalApiException: External API error: 500 INTERNAL_SERVER_ERROR)
+2026-06-14 16:10:41 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:10:41 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 16:10:41 - ⏹️ END: TasksGatewayService.getTasks | Status: ERROR | Duration: 8 ms
+2026-06-14 16:10:41 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, com.mipt.aleksandrivanovich.second_sem.hw_1.exception.ExternalApiException: External API error: 500 INTERNAL_SERVER_ERROR)
+2026-06-14 16:10:41 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:10:41 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:10:41 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:10:41 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:10:41 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:14:30 - ▶️ START: TasksGatewayService.createTask(Test Task, false)
+2026-06-14 16:14:30 - ⏹️ END: TasksGatewayService.createTask | Status: SUCCESS | Duration: 17 ms | Result: ExternalTaskDto[id=1, title=Test Task, completed=false]
+2026-06-14 16:14:30 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 16:14:31 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 9 ms | Result: [ExternalTaskDto[id=1, title=Test Task, completed=false]]
+2026-06-14 16:14:31 - ▶️ START: TasksGatewayService.getTaskFallback(1, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:31 - ⏹️ END: TasksGatewayService.getTaskFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 16:14:31 - ▶️ START: TasksGatewayService.deleteTaskFallback(1, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:31 - ⏹️ END: TasksGatewayService.deleteTaskFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:14:45 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 16:14:45 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 4 ms | Result: [ExternalTaskDto[id=1, title=Test Task, completed=false]]
+2026-06-14 16:14:46 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 16:14:46 - ⏹️ END: TasksGatewayService.getTasks | Status: SUCCESS | Duration: 6 ms | Result: [ExternalTaskDto[id=1, title=Test Task, completed=false]]
+2026-06-14 16:14:46 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:46 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:14:46 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:46 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:14:46 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:46 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:14:57 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 16:14:57 - ⏹️ END: TasksGatewayService.getTasks | Status: ERROR | Duration: 8 ms
+2026-06-14 16:14:57 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, com.mipt.aleksandrivanovich.second_sem.hw_1.exception.ExternalApiException: External API error: 500 INTERNAL_SERVER_ERROR)
+2026-06-14 16:14:57 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:14:57 - ▶️ START: TasksGatewayService.getTasks(null, 100)
+2026-06-14 16:14:57 - ⏹️ END: TasksGatewayService.getTasks | Status: ERROR | Duration: 6 ms
+2026-06-14 16:14:57 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, com.mipt.aleksandrivanovich.second_sem.hw_1.exception.ExternalApiException: External API error: 500 INTERNAL_SERVER_ERROR)
+2026-06-14 16:14:57 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:14:57 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:57 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:14:57 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:57 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 16:14:57 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:57 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:14:57 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:57 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 1 ms
+2026-06-14 16:14:57 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:57 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:14:57 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:57 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:14:57 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:57 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
+2026-06-14 16:14:57 - ▶️ START: TasksGatewayService.getTasksFallback(null, 100, io.github.resilience4j.ratelimiter.RequestNotPermitted: RateLimiter 'externalApi' does not permit further calls)
+2026-06-14 16:14:57 - ⏹️ END: TasksGatewayService.getTasksFallback | Status: ERROR | Duration: 0 ms
